@@ -1,0 +1,123 @@
+@import url('./../Setting/color.less');
+
+#sevenAttributes {
+	background-color: @ogilvy_red;
+
+	.logotype {
+		display: flex;
+		overflow: hidden;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+
+		& > div {
+			display: inline-block;
+			width: 410px;
+			height: 410px;
+			border-radius: 50%;
+			background-image: url(@img);
+			background-position: center;
+			background-size: 70%;
+			background-repeat: no-repeat;
+			box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.5);
+
+			@img: './img/sevenAttributes/word.svg';
+		}
+	}
+
+	.list {
+		position: relative;
+		width: 100%;
+		height: 860px;
+
+		& > .name {
+			position: absolute;
+			top: 60px;
+			left: 150px;
+			color: #000;
+			text-transform: uppercase;
+			letter-spacing: 1rem;
+			font-weight: bold;
+			font-size: 9rem;
+			transform: rotate(90deg);
+			transform-origin: left top;
+		}
+
+		& > .attributes {
+			position: relative;
+			box-sizing: border-box;
+			padding: 48px 0 0 150px;
+			width: 100%;
+			height: 100%;
+
+			.row {
+				display: flex;
+				float: left;
+				align-items: center;
+				flex-direction: row;
+				justify-content: center;
+				margin: 1px 0;
+				width: 100%;
+				height: 111px;
+				font-size: @desktop_p_fontSize;
+
+				& > div {
+					float: left;
+					text-align: center;
+				}
+
+				& > div:nth-child(1) {
+					width: 20%;
+					color: #fff;
+					text-transform: uppercase;
+				}
+
+				& > div:nth-child(2) {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 5%;
+
+					& > div {
+						width: 1px;
+						height: 50px;
+						background-color: #000;
+						transform: rotate(45deg);
+					}
+				}
+
+				& > div:nth-child(3) {
+					width: 10%;
+					color: #000;
+				}
+
+				& > div:nth-child(4) {
+					width: 65%;
+					text-align: left;
+					padding: 0 20px;
+					box-sizing: border-box;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	#sevenAttributes {
+		.list {
+			height: 910px;
+
+			& > .name {
+				letter-spacing: 5rem;
+			}
+
+			& > .attributes {
+				padding: 23px 0 0 150px;
+				.row {
+					font-size: @mobile_p_fontSize * 0.7;
+					height: 175px;
+				}
+			}
+		}
+	}
+}

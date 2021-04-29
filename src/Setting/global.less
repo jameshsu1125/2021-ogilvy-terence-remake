@@ -1,4 +1,52 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+@import url('./color.less');
+
 body {
 	margin: 0;
+	font-family: ‘cwTeXFangSong’, serif;
 	text-size-adjust: none;
+	outline: none;
+}
+
+.container {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0;
+
+	.content {
+		width: 100%;
+		max-width: 952px;
+		color: #fff;
+
+		p {
+			text-align: justify;
+			font-size: @desktop_p_fontSize;
+			line-height: @desktop_p_lineheight;
+			margin-block-start: 3rem;
+			margin-block-end: 3rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.container {
+		.content {
+			width: 750px;
+			padding: 30px;
+			box-sizing: border-box;
+
+			h1 {
+				font-size: @mobile_h1_fontSize;
+			}
+
+			p {
+				font-size: @mobile_p_fontSize;
+				line-height: @mobile_p_lineheight;
+			}
+		}
+	}
 }

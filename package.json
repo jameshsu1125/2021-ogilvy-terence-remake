@@ -39,7 +39,11 @@
 		"webpack-dev-server": "^3.11.2"
 	},
 	"dependencies": {
+		"html-react-parser": "^1.2.6",
+		"lesca-number": "^1.1.9",
 		"react": "^17.0.2",
-		"react-dom": "^17.0.2"
+		"react-dom": "^17.0.2",
+		"react-slick": "^0.28.1",
+		"slick-carousel": "^1.8.1"
 	}
 }

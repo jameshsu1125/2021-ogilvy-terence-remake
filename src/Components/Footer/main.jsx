@@ -7,6 +7,11 @@ const Footer = () => (
 			onClick={() => {
 				window.open('https://www.facebook.com/OgilvyTaiwan/');
 			}}
+			onKeyPress={() => {
+				window.open('https://www.facebook.com/OgilvyTaiwan/');
+			}}
+			role='button'
+			tabIndex='0'
 		>
 			<div className='logo' />
 			<div className='label'>

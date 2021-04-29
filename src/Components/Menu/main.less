@@ -3,17 +3,17 @@
 menu {
 	position: sticky;
 	top: 65px;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 100%;
+	background-image: url('./../Header/img/theme_background_texture.jpg');
+
 	padding-inline-start: 0;
 	margin-block-start: 0em;
 	margin-block-end: 0em;
-	width: 100%;
-	box-sizing: border-box;
-	background-image: url('./../Header/img/theme_background_texture.jpg');
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
 
 	.menu-event {
 		height: 102px !important;
@@ -24,12 +24,13 @@ menu {
 	}
 
 	.menu-col {
-		width: 952px;
 		display: grid;
-		grid-template-columns: 25% 25% 25% 25%;
+		overflow: hidden;
+		width: 952px;
 		height: 227px;
 		transition-duration: 0.4s;
-		overflow: hidden;
+
+		grid-template-columns: 25% 25% 25% 25%;
 
 		& > div:nth-child(1) {
 			.ico {
@@ -58,17 +59,16 @@ menu {
 
 		.menu-container {
 			position: relative;
-			width: 100%;
-			height: 100%;
-			padding: 20px;
-			box-sizing: border-box;
-
 			display: flex;
+			align-items: center;
 			flex-direction: column;
 			justify-content: flex-start;
-			align-items: center;
-
+			box-sizing: border-box;
+			padding: 20px;
+			width: 100%;
+			height: 100%;
 			text-align: center;
+
 			user-select: none;
 
 			.ico {
@@ -76,24 +76,23 @@ menu {
 				height: 40px;
 				border-radius: 50%;
 				background-color: @ogilvy_black;
-
-				background-repeat: no-repeat;
 				background-position: center;
+				background-repeat: no-repeat;
 			}
 
 			.title {
-				width: 100%;
 				margin: 5px 0;
-				font-size: 1rem;
+				width: 100%;
 				color: #111;
 				font-weight: bold;
+				font-size: 1rem;
 			}
 
 			.list {
-				width: 100%;
 				margin: 5px 0 5px;
-				font-size: 0.9rem;
+				width: 100%;
 				color: @ogilvy_black;
+				font-size: 0.9rem;
 
 				& > div {
 					margin: 5px 0;

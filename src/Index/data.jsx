@@ -1,6 +1,10 @@
 import MilesYoung from './img/terenceInMyEyes/Miles-Young.jpg';
 import PaulHeath from './img/terenceInMyEyes/Paul-Heath.jpg';
 import TBSong from './img/terenceInMyEyes/TB-Song.jpg';
+import Shenan from './img/terenceInMyEyes/Shenan-Chuang.jpg';
+import Joseph from './img/terenceInMyEyes/Joseph-Pai.jpg';
+import Daniel from './img/terenceInMyEyes/Daniel-Lee.jpg';
+import Joyce from './img/terenceInMyEyes/Joyce-Chang.jpg';
 
 export default {};
 export const Carousel = [
@@ -64,7 +68,7 @@ export const Carousel = [
 		],
 	},
 	{
-		photo: require('./img/terenceInMyEyes/Shenan-Chuang.jpg'),
+		photo: Shenan,
 		name: {
 			cht: '莊淑芬',
 			eng: 'Shenan Chuang',
@@ -85,7 +89,7 @@ export const Carousel = [
 		],
 	},
 	{
-		photo: require('./img/terenceInMyEyes/Joseph-Pai.jpg'),
+		photo: Joseph,
 		name: {
 			cht: '白崇亮',
 			eng: 'Joseph Pai',
@@ -105,7 +109,7 @@ export const Carousel = [
 		],
 	},
 	{
-		photo: require('./img/terenceInMyEyes/Daniel-Lee.jpg'),
+		photo: Daniel,
 		name: {
 			cht: '李景宏',
 			eng: 'Daniel Lee',
@@ -125,7 +129,7 @@ export const Carousel = [
 		],
 	},
 	{
-		photo: require('./img/terenceInMyEyes/Joyce-Chang.jpg'),
+		photo: Joyce,
 		name: {
 			cht: '張崇琦',
 			eng: 'Joyce Chang',

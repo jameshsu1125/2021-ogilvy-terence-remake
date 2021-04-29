@@ -9,10 +9,11 @@ export default class Nav extends React.Component {
 			labels: [
 				{ name: '回首頁', url: './' },
 				{ name: '奧美大中國', url: 'https://www.ogilvy.com.tw/zh/index.aspx' },
-				{
-					name: '台灣奧美粉絲團',
-					url: 'https://www.facebook.com/OgilvyTaiwan/',
-				},
+				{ name: '台灣奧美粉絲團', url: 'https://www.facebook.com/OgilvyTaiwan/' },
+				{ name: '認識林宗緯', url: './' },
+				{ name: '實習計畫介紹', url: './introduction.html' },
+				{ name: '如何申請', url: './how.html' },
+				{ name: '受獎助者', url: './experience.html' },
 			],
 		};
 	}

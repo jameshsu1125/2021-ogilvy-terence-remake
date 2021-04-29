@@ -1,19 +1,19 @@
 @import url('./../../Setting/color.less');
 
 footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
 	height: 270px;
 	background-color: @ogilvy_red;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 
 	& > div {
-		width: 300px;
 		display: flex;
+		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
+		width: 300px;
 
 		& > div {
 			margin: 10px;
@@ -21,18 +21,19 @@ footer {
 		}
 
 		.logo {
-			@img: './img/fb.svg';
-			background-image: url(@img);
 			width: image-width(@img);
 			height: image-height(@img);
+			background-image: url(@img);
+
+			@img: './img/fb.svg';
 		}
 
 		.label {
-			text-align: center;
-			font-size: 1rem;
-			font-style: italic;
 			color: @ogilvy_black;
+			text-align: center;
 			text-transform: uppercase;
+			font-style: italic;
+			font-size: 1rem;
 		}
 	}
 }

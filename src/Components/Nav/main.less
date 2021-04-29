@@ -2,12 +2,12 @@
 
 nav {
 	position: fixed;
+	top: 0;
+	z-index: 3;
+	overflow: hidden;
 	width: 100%;
 	height: 65px;
 	background-color: @ogilvy_red;
-	overflow: hidden;
-	z-index: 3;
-	top: 0;
 
 	a,
 	a:link,
@@ -18,17 +18,18 @@ nav {
 
 	.logo {
 		float: left;
-		@img: './img/ogilvy-vector-logo.svg';
 		width: 220px;
 		height: 100%;
-		background-size: 100px;
 		background-color: black;
+		background-size: 100px;
+		cursor: pointer;
+		transition: 0.1s;
+
+		@img: './img/ogilvy-vector-logo.svg';
 		mask-image: url(@img);
 		mask-size: auto 55%;
 		mask-position: 30px center;
 		mask-repeat: no-repeat;
-		transition: 0.1s;
-		cursor: pointer;
 
 		&:hover {
 			background-color: #fff;
@@ -37,44 +38,42 @@ nav {
 
 	.ham-content {
 		position: fixed;
-		width: 100%;
-		height: 100%;
 		top: 0;
-		background-color: @ogilvy_red;
-
 		display: flex;
+		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
+		width: 100%;
+		height: 100%;
+		background-color: @ogilvy_red;
 
 		& > div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			width: 100%;
 			height: 10vh;
-			font-size: 2rem;
 			color: #fff;
+			font-size: 2rem;
 			cursor: pointer;
-
-			display: flex;
-			justify-content: center;
-			align-items: center;
 		}
 
 		.close {
 			position: absolute;
-			width: 20vw;
-			height: 20vw;
 			top: 0;
 			right: 0;
+			width: 20vw;
+			height: 20vw;
 
 			& > div {
 				position: absolute;
-				width: 60%;
-				height: 6px;
-				background-color: #fff;
 				top: 50%;
 				left: 50%;
 				margin-top: -3px;
 				margin-left: -30%;
+				width: 60%;
+				height: 6px;
+				background-color: #fff;
 			}
 
 			& > div:nth-child(1) {
@@ -87,50 +86,46 @@ nav {
 	}
 
 	.ham {
-		float: right;
-		width: 130px;
-		height: 130px;
 		display: none;
-
+		float: right;
+		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
-
+		width: 130px;
+		height: 130px;
 		cursor: pointer;
 
 		& > div {
+			margin: 5% 0;
 			width: 60%;
 			height: 10px;
-			background-color: #fff;
-			margin: 5% 0;
 			border-radius: 5px;
+			background-color: #fff;
 			pointer-events: none;
 		}
 	}
 
 	.menu {
-		float: right;
-		width: calc(~'100% - 220px');
-		height: 100%;
-
 		display: flex;
+		float: right;
+		align-items: center;
 		flex-direction: row;
 		justify-content: flex-end;
-		align-items: center;
-		user-select: none;
-
-		padding: 0 30px;
 		box-sizing: border-box;
-
+		padding: 0 30px;
+		width: calc(~'100% - 220px');
+		height: 100%;
 		transition: 0.1s;
 
+		user-select: none;
+
 		& > div {
-			font-size: 0.8rem;
-			color: #fff;
-			padding: 16px 10px;
-			cursor: pointer;
 			box-sizing: border-box;
+			padding: 16px 10px;
 			outline: none;
+			color: #fff;
+			font-size: 0.8rem;
+			cursor: pointer;
 
 			&:hover {
 				color: #111;
@@ -138,10 +133,10 @@ nav {
 		}
 
 		& > div:nth-child(1) {
-			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFGmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNi4wLWMwMDIgNzkuMTY0NDg4LCAyMDIwLzA3LzEwLTIyOjA2OjUzICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjIuMCAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjEtMDQtMTNUMTg6Mjc6MTErMDg6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIxLTA0LTEzVDE4OjI3OjM3KzA4OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIxLTA0LTEzVDE4OjI3OjM3KzA4OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjYwMDhjYWNjLThmODgtNGNhNC05NWU5LThhZTVmZWZjMjAyZSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2MDA4Y2FjYy04Zjg4LTRjYTQtOTVlOS04YWU1ZmVmYzIwMmUiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2MDA4Y2FjYy04Zjg4LTRjYTQtOTVlOS04YWU1ZmVmYzIwMmUiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjYwMDhjYWNjLThmODgtNGNhNC05NWU5LThhZTVmZWZjMjAyZSIgc3RFdnQ6d2hlbj0iMjAyMS0wNC0xM1QxODoyNzoxMSswODowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjAgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+k5kogwAAADtJREFUGJWNjkEKADAMwrT//7O7jaIylktB0lZKgiEA3MEUYc+Q/KRcip87n4dwxfGSBXpxtKUmBV/SAQJIDAqzzSzQAAAAAElFTkSuQmCC');
-			background-repeat: no-repeat;
-			background-position: 10px calc(~'50% + 2px');
 			padding: 16px 10px 16px 23px;
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFGmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNi4wLWMwMDIgNzkuMTY0NDg4LCAyMDIwLzA3LzEwLTIyOjA2OjUzICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjIuMCAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjEtMDQtMTNUMTg6Mjc6MTErMDg6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIxLTA0LTEzVDE4OjI3OjM3KzA4OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIxLTA0LTEzVDE4OjI3OjM3KzA4OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjYwMDhjYWNjLThmODgtNGNhNC05NWU5LThhZTVmZWZjMjAyZSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2MDA4Y2FjYy04Zjg4LTRjYTQtOTVlOS04YWU1ZmVmYzIwMmUiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2MDA4Y2FjYy04Zjg4LTRjYTQtOTVlOS04YWU1ZmVmYzIwMmUiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjYwMDhjYWNjLThmODgtNGNhNC05NWU5LThhZTVmZWZjMjAyZSIgc3RFdnQ6d2hlbj0iMjAyMS0wNC0xM1QxODoyNzoxMSswODowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjAgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+k5kogwAAADtJREFUGJWNjkEKADAMwrT//7O7jaIylktB0lZKgiEA3MEUYc+Q/KRcip87n4dwxfGSBXpxtKUmBV/SAQJIDAqzzSzQAAAAAElFTkSuQmCC');
+			background-position: 10px calc(~'50% + 2px');
+			background-repeat: no-repeat;
 		}
 	}
 }

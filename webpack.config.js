@@ -17,8 +17,8 @@ module.exports = () => {
 		entry: {
 			index: './src/index.jsx', // 認識林宗緯
 			introduction: './src/introduction.jsx', // 實習計畫介紹
-			how: './src/index.jsx', // 如何申請
-			experience: './src/index.jsx', // 受獎助者
+			how: './src/how.jsx', // 如何申請
+			experience: './src/experience.jsx', // 受獎助者
 		},
 
 		module: {

@@ -10,14 +10,8 @@ export default {};
 export const Carousel = [
 	{
 		photo: MilesYoung,
-		name: {
-			cht: '楊明皓',
-			eng: 'Miles Young',
-		},
-		position: {
-			cht: '奧美亞太區董事長',
-			eng: 'Chairman, O&M - Asia Pacific',
-		},
+		name: { cht: '楊明皓', eng: 'Miles Young' },
+		position: { cht: '奧美亞太區董事長', eng: 'Chairman, O&M - Asia Pacific' },
 		parserBody: [
 			'Terence是個極具個人魅力、充滿熱情又堅守價值信仰的人。',
 			'關於他，我想不出有任何負面或批評的話語。',
@@ -28,14 +22,8 @@ export const Carousel = [
 	},
 	{
 		photo: PaulHeath,
-		name: {
-			cht: '占保羅',
-			eng: 'Paul Heath　President',
-		},
-		position: {
-			cht: '奧美廣告亞太區總裁',
-			eng: 'Ogilvy & Mather Advertising - Asia Pacific',
-		},
+		name: { cht: '占保羅', eng: 'Paul Heath　President' },
+		position: { cht: '奧美廣告亞太區總裁', eng: 'Ogilvy & Mather Advertising - Asia Pacific' },
 		parserBody: [
 			'我第一次見到Terence是在印尼，當時我們正在舉辦奧美跨國的培訓計劃AAC。',
 			'Terence極富趣味的幽默感立刻吸引了我，不僅如此，他舉手投足間表露出對廣告單純又懾人的熱情，讓我非常印象深刻。',
@@ -49,14 +37,8 @@ export const Carousel = [
 	},
 	{
 		photo: TBSong,
-		name: {
-			cht: '宋秩銘',
-			eng: 'TB Song',
-		},
-		position: {
-			cht: '奧美大中華區董事長',
-			eng: 'Chairman, O&M Greater China',
-		},
+		name: { cht: '宋秩銘', eng: 'TB Song' },
+		position: { cht: '奧美大中華區董事長', eng: 'Chairman, O&M Greater China' },
 		parserBody: [
 			'Terence是奧美的好學生，好員工，也是我們未來的明星。Annie亦是。',
 			'記得去年Terence和Annie希望來大陸，大陸的同事亦希望他們來，卻沒想到有今天的結果。',
@@ -69,14 +51,8 @@ export const Carousel = [
 	},
 	{
 		photo: Shenan,
-		name: {
-			cht: '莊淑芬',
-			eng: 'Shenan Chuang',
-		},
-		position: {
-			cht: '奧美整合行銷傳播集團中國區 首席執行長',
-			eng: 'CEO, Ogilvy & Mather Group, China',
-		},
+		name: { cht: '莊淑芬', eng: 'Shenan Chuang' },
+		position: { cht: '奧美整合行銷傳播集團中國區 首席執行長', eng: 'CEO, Ogilvy & Mather Group, China' },
 		parserBody: [
 			'一個可愛的大男孩。',
 			'一個終其一生矢志做廣告的人。',
@@ -90,14 +66,8 @@ export const Carousel = [
 	},
 	{
 		photo: Joseph,
-		name: {
-			cht: '白崇亮',
-			eng: 'Joseph Pai',
-		},
-		position: {
-			cht: '台灣奧美集團董事長',
-			eng: 'Chairman, O&M Group',
-		},
+		name: { cht: '白崇亮', eng: 'Joseph Pai' },
+		position: { cht: '台灣奧美集團董事長', eng: 'Chairman, O&M Group' },
 		parserBody: [
 			'Terence是我見過最熱情的年輕奧美人。',
 			'他的臉上總是掛著帶一點孩子氣的天真笑容，也總是在每一項客戶任務與公司活動上盡情投入。',
@@ -110,14 +80,8 @@ export const Carousel = [
 	},
 	{
 		photo: Daniel,
-		name: {
-			cht: '李景宏',
-			eng: 'Daniel Lee',
-		},
-		position: {
-			cht: '台灣奧美廣告董事總經理',
-			eng: 'Managing Director, O&M Advertising, Taiwan',
-		},
+		name: { cht: '李景宏', eng: 'Daniel Lee' },
+		position: { cht: '台灣奧美廣告董事總經理', eng: 'Managing Director, O&M Advertising, Taiwan' },
 		parserBody: [
 			'如果你跟他不熟，你會首先因為他爽朗的笑聲，搞笑的技倆，而覺得他是一個有趣的甘草型人物，',
 			'你會自然的向他靠近，因為沒有壓力，因為很放鬆，因為不知道怎麼搞的，他就是有辦法弄出一堆笑聲，讓周遭的人很愉快。',
@@ -130,14 +94,8 @@ export const Carousel = [
 	},
 	{
 		photo: Joyce,
-		name: {
-			cht: '張崇琦',
-			eng: 'Joyce Chang',
-		},
-		position: {
-			cht: '北京奧美廣告董事總經理',
-			eng: 'Managing Director, O&M Advertising, Beijing',
-		},
+		name: { cht: '張崇琦', eng: 'Joyce Chang' },
+		position: { cht: '北京奧美廣告董事總經理', eng: 'Managing Director, O&M Advertising, Beijing' },
 		parserBody: [
 			'在我眼中的Terence：',
 			'~ 多面，多情，多才 ~',
@@ -157,8 +115,7 @@ export const Attributes = [
 	},
 	{
 		type: { eng: 'enthusiasm', cht: '熱情' },
-		description:
-			'熱情，是廣告工作最大的武器，不只是廣告,他對家人、對朋友、對生命，都有著源源不絕的熱情',
+		description: '熱情，是廣告工作最大的武器，不只是廣告,他對家人、對朋友、對生命，都有著源源不絕的熱情',
 	},
 	{
 		type: { eng: 'respect', cht: '尊重' },

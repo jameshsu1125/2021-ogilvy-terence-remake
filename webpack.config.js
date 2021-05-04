@@ -16,7 +16,7 @@ module.exports = () => {
 		// 需要更多頁面時可以新增
 		entry: {
 			index: './src/index.jsx', // 認識林宗緯
-			introduction: './src/index.jsx', // 實習計畫介紹
+			introduction: './src/introduction.jsx', // 實習計畫介紹
 			how: './src/index.jsx', // 如何申請
 			experience: './src/index.jsx', // 受獎助者
 		},

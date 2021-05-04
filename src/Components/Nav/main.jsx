@@ -1,57 +1,52 @@
-import React from 'react';
+import { useState } from 'react';
 import './main.less';
 
-export default class Nav extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			hamContent: false,
-			labels: [
-				{ name: '回首頁', url: './' },
-				{ name: '奧美大中國', url: 'https://www.ogilvy.com.tw/zh/index.aspx' },
-				{ name: '台灣奧美粉絲團', url: 'https://www.facebook.com/OgilvyTaiwan/' },
-				{ name: '認識林宗緯', url: './' },
-				{ name: '實習計畫介紹', url: './introduction.html' },
-				{ name: '如何申請', url: './how.html' },
-				{ name: '受獎助者', url: './experience.html' },
-			],
+const Nav = () => {
+	const [hamContent, setHamContent] = useState(false);
+	const [labels] = useState([
+		{ name: '回首頁', url: './' },
+		{ name: '奧美大中國', url: 'https://www.ogilvy.com.tw/zh/index.aspx' },
+		{ name: '台灣奧美粉絲團', url: 'https://www.facebook.com/OgilvyTaiwan/' },
+		{ name: '認識林宗緯', url: './' },
+		{ name: '實習計畫介紹', url: './introduction.html' },
+		{ name: '如何申請', url: './how.html' },
+		{ name: '受獎助者', url: './experience.html' },
+	]);
+
+	const showHamContent = () => {
+		setHamContent(true);
+	};
+
+	const appendMenu = (isHamContent = false) => {
+		const linkTo = (e) => {
+			const target = e.url.indexOf('http') ? 'self' : 'blank';
+			if (target === 'self') window.location.href = e.url;
+			else window.open(e.url);
 		};
-	}
-
-	showHamContent() {
-		this.setState({ hamContent: true });
-	}
-
-	appendMenu() {
-		const { labels } = this.state;
-		const linkTo = (e) => window.open(e.url);
-		return labels.map((e) => (
-			<div
-				key={e.name}
-				onClick={() => linkTo(e)}
-				onKeyPress={() => linkTo(e)}
-				role='button'
-				tabIndex={0}
-			>
+		const getContents = (e, i) => (
+			<div key={e.name} onClick={() => linkTo(e)} onKeyPress={() => linkTo(e)} role='button' tabIndex={i}>
 				{e.name}
 			</div>
-		));
-	}
+		);
 
-	appendHamContent() {
-		const { hamContent } = this.state;
-		const close = () => this.setState({ hamContent: false });
+		return labels.map((e, i) => {
+			if (!isHamContent) {
+				if (i <= 2) {
+					return getContents(e, i);
+				}
+				return false;
+			}
+			return getContents(e, i);
+		});
+	};
+
+	const appendHamContent = () => {
+		const close = () => setHamContent(false);
 		if (hamContent) {
 			return (
 				<div className='ham-content'>
-					{this.appendMenu()}
-					<div
-						className='close'
-						onClick={() => close()}
-						onKeyPress={() => close()}
-						role='button'
-						tabIndex='0'
-					>
+					{appendMenu(true)}
+					<div className='close' onClick={() => close()} onKeyPress={() => close()} role='button' tabIndex='0'>
 						<div />
 						<div />
 					</div>
@@ -59,26 +54,25 @@ export default class Nav extends React.Component {
 			);
 		}
 		return false;
-	}
+	};
 
-	render() {
-		return (
-			<nav>
-				<div className='logo' />
-				<div className='menu'>{this.appendMenu()}</div>
-				<div
-					className='ham'
-					role='button'
-					onClick={this.showHamContent.bind(this)}
-					onKeyPress={this.showHamContent.bind(this)}
-					tabIndex={0}
-				>
-					<div />
-					<div />
-					<div />
-				</div>
-				{this.appendHamContent()}
-			</nav>
-		);
-	}
-}
+	return (
+		<nav>
+			<div className='logo' />
+			<div className='menu'>{appendMenu()}</div>
+			<div
+				className='ham'
+				role='button'
+				onClick={showHamContent.bind(this)}
+				onKeyPress={showHamContent.bind(this)}
+				tabIndex={0}
+			>
+				<div />
+				<div />
+				<div />
+			</div>
+			{appendHamContent()}
+		</nav>
+	);
+};
+export default Nav;

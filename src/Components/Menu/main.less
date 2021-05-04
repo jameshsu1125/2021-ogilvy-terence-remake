@@ -11,9 +11,10 @@ menu {
 	width: 100%;
 	background-image: url('./../Header/img/theme_background_texture.jpg');
 
-	padding-inline-start: 0;
-	margin-block-start: 0em;
-	margin-block-end: 0em;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	padding: 0;
+	margin: 0;
 
 	.menu-event {
 		height: 102px !important;
@@ -71,21 +72,29 @@ menu {
 
 			user-select: none;
 
-			.ico {
-				width: 40px;
-				height: 40px;
-				border-radius: 50%;
-				background-color: @ogilvy_black;
-				background-position: center;
-				background-repeat: no-repeat;
-			}
-
-			.title {
-				margin: 5px 0;
+			.menu-main {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: flex-start;
 				width: 100%;
-				color: #111;
-				font-weight: bold;
-				font-size: 1rem;
+
+				.ico {
+					width: 40px;
+					height: 40px;
+					border-radius: 50%;
+					background-color: @ogilvy_black;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+
+				.title {
+					margin: 5px 0;
+					width: 100%;
+					color: #111;
+					font-weight: bold;
+					font-size: 1rem;
+				}
 			}
 
 			.list {
@@ -97,6 +106,11 @@ menu {
 				& > div {
 					margin: 5px 0;
 					outline: none;
+
+					& > a {
+						color: @ogilvy_black;
+						text-decoration: none;
+					}
 
 					&:hover {
 						text-decoration: underline;
@@ -111,5 +125,34 @@ menu {
 @media only screen and (max-width: 750px) {
 	menu {
 		top: 130px;
+
+		.menu-event {
+			height: 150px !important;
+
+			&:hover {
+				height: 320px !important;
+			}
+		}
+
+		.menu-col {
+			height: 320px;
+			.menu-container {
+				.menu-main {
+					.ico {
+						width: 80px;
+						height: 80px;
+					}
+					.title {
+						font-size: 1.3rem;
+					}
+				}
+				.list {
+					font-size: 1.1rem;
+					& > div {
+						margin: 10px 0;
+					}
+				}
+			}
+		}
 	}
 }

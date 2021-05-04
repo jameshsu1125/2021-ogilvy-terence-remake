@@ -1,5 +1,4 @@
 /* eslint-disable no-irregular-whitespace */
-import React from 'react';
 import { News } from '../../Setting/config';
 import './main.less';
 

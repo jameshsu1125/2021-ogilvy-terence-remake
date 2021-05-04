@@ -1,4 +1,3 @@
-import React from 'react';
 import Content from '../Components/content/main';
 import Headline from '../Components/Headline/main';
 import './sevenAttributes.less';

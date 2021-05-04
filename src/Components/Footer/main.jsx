@@ -1,4 +1,3 @@
-import React from 'react';
 import './main.less';
 
 const Footer = () => (

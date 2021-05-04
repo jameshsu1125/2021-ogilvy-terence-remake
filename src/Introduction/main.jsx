@@ -1,19 +1,12 @@
 import Hash from 'lesca-url-parameters';
 import { useEffect } from 'react';
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
 import Footer from '../Components/Footer/main';
 import Header from '../Components/Header/main';
 import Menu from '../Components/Menu/main';
 import Nav from '../Components/Nav/main';
 import { HtmlName, MenuList, ScrollTo } from '../Setting/config';
-import KnowTerence from './knowTerence';
-import './main.less';
-import SevenAttributes from './sevenAttributes';
-import TerenceInMyEyes from './terenceInMyEyes';
-import TerenceQuotations from './terenceQuotations';
 
-const Index = () => {
+const Introduction = () => {
 	useEffect(() => {
 		window.addEventListener('hashchange', () => {
 			const fileName = Hash.file().replace(/\.[^/.]+$/, '');
@@ -47,13 +40,8 @@ const Index = () => {
 			<Nav />
 			<Header />
 			<Menu />
-			<KnowTerence />
-			<TerenceInMyEyes />
-			<SevenAttributes />
-			<TerenceQuotations />
 			<Footer />
 		</div>
 	);
 };
-
-export default Index;
+export default Introduction;

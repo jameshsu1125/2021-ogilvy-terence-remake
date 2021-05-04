@@ -5,6 +5,9 @@ import Header from '../Components/Header/main';
 import Menu from '../Components/Menu/main';
 import Nav from '../Components/Nav/main';
 import { HtmlName, MenuList, ScrollTo } from '../Setting/config';
+import './main.less';
+import ProjectPurpose from './projectPurpose';
+import GrantProgram from './grantProgram';
 
 const Introduction = () => {
 	useEffect(() => {
@@ -31,15 +34,18 @@ const Introduction = () => {
 				return false;
 			});
 			if (hashData.length === 0) return;
+
 			const { id } = hashData[0];
-			ScrollTo(document.getElementById(id));
+			if (id) ScrollTo(document.getElementById(id));
 		});
 	});
 	return (
-		<div id='index'>
+		<div id='introduction'>
 			<Nav />
 			<Header />
 			<Menu />
+			<ProjectPurpose />
+			<GrantProgram />
 			<Footer />
 		</div>
 	);

@@ -39,7 +39,7 @@ const Index = () => {
 			});
 			if (hashData.length === 0) return;
 			const { id } = hashData[0];
-			ScrollTo(document.getElementById(id));
+			if (id) ScrollTo(document.getElementById(id));
 		});
 	});
 	return (

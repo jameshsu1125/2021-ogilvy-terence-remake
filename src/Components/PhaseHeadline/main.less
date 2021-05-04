@@ -1,0 +1,44 @@
+@import url('./../../Setting/color.less');
+
+.phase {
+	position: relative;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	margin-block-start: 40px;
+	margin-block-end: 40px;
+
+	@indent: 45px;
+	&::before {
+		position: relative;
+		width: 45px;
+		height: 45px;
+		content: 'phase';
+		top: 0;
+		background-color: #fff;
+		border-radius: 50%;
+		color: @ogilvy_black;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-indent: @indent;
+		margin-right: @indent * 0.6;
+		font-size: 22px;
+
+		font-family: 'Baskerville', sans-serif;
+		font-style: italic;
+	}
+
+	& > div:nth-child(1) {
+		font-family: 'Baskerville', sans-serif;
+		font-style: italic;
+		font-size: 20px;
+	}
+
+	& > div {
+		margin: 0 6px;
+	}
+}

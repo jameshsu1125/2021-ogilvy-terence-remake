@@ -23,8 +23,8 @@ export const MenuList = [
 	{
 		name: '實習計畫介紹',
 		list: [
-			{ name: '計劃宗旨', id: '' },
-			{ name: '獎助計劃', id: '' },
+			{ name: '計劃宗旨', id: 'projectPurpose' },
+			{ name: '獎助計劃', id: 'grantProgram' },
 		],
 	},
 	{

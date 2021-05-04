@@ -41,11 +41,12 @@
 	"dependencies": {
 		"html-react-parser": "^1.2.6",
 		"jquery": "^3.6.0",
-		"lesca-number": "^1.1.9",
+		"lesca-number": "^1.1.10",
 		"lesca-url-parameters": "^1.0.0",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-slick": "^0.28.1",
+		"roman-numeral": "^0.2.6",
 		"slick-carousel": "^1.8.1"
 	}
 }

@@ -40,6 +40,7 @@ const Introduction = () => {
 			<Nav />
 			<Header />
 			<Menu />
+
 			<Footer />
 		</div>
 	);

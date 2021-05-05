@@ -105,6 +105,7 @@ header {
 			height: image-height(@img) * @size;
 			background-image: url(@img);
 			background-size: 100%;
+			pointer-events: none;
 
 			@size: 0.5;
 			@img: './img/tie.png';
@@ -186,7 +187,6 @@ header {
 				right: 30px;
 				width: image-width(@img) * @size;
 				height: image-height(@img) * @size;
-
 				@size: 0.4;
 				@img: './img/tie.png';
 			}

@@ -7,6 +7,7 @@ import { HashChange } from '../Setting/config';
 import './main.less';
 import QuotaGrantees from './quotaGrantees';
 import ReviewProcess from './reviewProcess';
+import SuggestionDirecting from './suggestionDirecting';
 
 const Introduction = () => {
 	useEffect(() => {
@@ -19,6 +20,7 @@ const Introduction = () => {
 			<Menu />
 			<QuotaGrantees />
 			<ReviewProcess />
+			<SuggestionDirecting />
 			<Footer />
 		</div>
 	);

@@ -1,4 +1,5 @@
 const Folder = 'bundle'; // 自動產生檔案的folder
+const { HotModuleReplacementPlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Meta = require('./template/template.meta');
 const path = require('path');
@@ -40,12 +41,13 @@ module.exports = () => {
 		output: {
 			path: path.resolve(__dirname, 'dist'),
 			filename: `${Folder}/js/[name].min.js`,
+			publicPath: '/',
 		},
 		resolve: {
 			extensions: ['*', '.js', '.jsx'],
 			alias: { root: path.resolve(__dirname, 'src/') },
 		},
-		plugins: [],
+		plugins: [new HotModuleReplacementPlugin()],
 		devtool: NODE_ENV === 'production' ? false : 'cheap-module-source-map',
 		devServer: {
 			contentBase: './dist',

@@ -33,8 +33,7 @@ export const MenuList = [
 		list: [
 			{ name: '獎助資格', id: 'quotaGrantees' },
 			{ name: '審核流程', id: 'reviewProcess' },
-			{ name: '建議與指導', id: '' },
-			{ name: '申請表格下載', id: '' },
+			{ name: '建議與指導', id: 'suggestionDirecting' },
 		],
 	},
 	{
@@ -42,7 +41,6 @@ export const MenuList = [
 		list: [
 			{ name: '實習心得', id: '' },
 			{ name: '實習相片', id: '' },
-			{ name: '給學弟妹的一封信', id: '' },
 		],
 	},
 ];

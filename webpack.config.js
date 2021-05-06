@@ -15,6 +15,7 @@ module.exports = () => {
 			introduction: './src/introduction.jsx', // 實習計畫介紹
 			how: './src/how.jsx', // 如何申請
 			experience: './src/experience.jsx', // 受獎助者
+			admin: './src/admin.jsx', // 編輯歷屆紅領帶
 		},
 		module: {
 			rules: [

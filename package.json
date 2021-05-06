@@ -39,12 +39,15 @@
 		"webpack-dev-server": "^3.11.2"
 	},
 	"dependencies": {
+		"draft-js": "^0.11.7",
+		"draftjs-to-html": "^0.9.1",
 		"html-react-parser": "^1.2.6",
 		"jquery": "^3.6.0",
 		"lesca-number": "^1.1.10",
 		"lesca-url-parameters": "^1.0.0",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
+		"react-draft-wysiwyg": "^1.14.7",
 		"react-slick": "^0.28.1",
 		"roman-numeral": "^0.2.6",
 		"slick-carousel": "^1.8.1"

@@ -42,6 +42,7 @@
 		"draft-js": "^0.11.7",
 		"draftjs-to-html": "^0.9.1",
 		"html-react-parser": "^1.2.6",
+		"html-to-draftjs": "^1.5.0",
 		"jquery": "^3.6.0",
 		"lesca-number": "^1.1.10",
 		"lesca-url-parameters": "^1.0.0",

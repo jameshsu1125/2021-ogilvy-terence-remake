@@ -3,21 +3,17 @@ import { useEffect, useRef } from 'react';
 import Content from '../Components/content/main';
 import Headline from '../Components/Headline/main';
 import RichEditor from '../Components/RichEditor/main';
-import './editor.less';
+import { FunctionList as Data, DefaultNewsContent as DefaultContent } from './data';
+import './newsEditor.less';
 
-const defaultValueOfMember = '王小明';
-
-const appendOptions = () =>
-	[...new Array(30).keys()].map((e) => <option key={e} value={e + 2009}>{`第${e + 1}屆`}</option>);
-
-const calcFullYears = () => new Date().getFullYear();
+const defaultValueOfTitle = '第{n}屆奧美林宗緯紅領帶實習計畫{開始報名}';
 
 const onFocus = (e) => {
 	const { target } = e;
 	const { value } = target;
 	const { dataset } = target;
 	if (value === dataset.name) {
-		target.value = '';
+		// target.value = '';
 	}
 };
 
@@ -30,47 +26,39 @@ const onBlur = (e) => {
 	}
 };
 
-const Editor = () => {
+const MemberEditor = () => {
 	const richEditor = useRef(null);
-	const nameRef = useRef();
-	const yearRef = useRef();
+	const titleRef = useRef();
 
 	const getResult = () => {
 		const { current: target } = richEditor;
 		const html = target.getHTML?.();
-		const { value: name } = nameRef.current;
-		const { value: year } = yearRef.current;
-		const data = { html, name, year };
+		const { value: title } = titleRef.current;
+		const data = { html, title };
 		// eslint-disable-next-line no-console
 		console.log(data);
 	};
 	useEffect(() => {});
 
 	return (
-		<Content id='Editor'>
-			<Headline text='新增紅領帶成員心得' theme='red' />
+		<Content id='NewsEditor'>
+			<Headline text={Data[0].label} theme='red' />
 			<div className='block'>
-				<div className='col-2'>
+				<div className='col'>
 					<label htmlFor='member'>
-						名字：
+						新聞標題：
 						<input
-							ref={nameRef}
-							data-name={defaultValueOfMember}
+							ref={titleRef}
+							data-name={defaultValueOfTitle}
 							onBlur={onBlur}
 							onFocus={onFocus}
 							id='member'
-							defaultValue={defaultValueOfMember}
+							defaultValue={defaultValueOfTitle}
 						/>
-					</label>
-					<label htmlFor='member'>
-						屆數：
-						<select ref={yearRef} defaultValue={calcFullYears()}>
-							{appendOptions()}
-						</select>
 					</label>
 				</div>
 			</div>
-			<RichEditor ref={richEditor} getResult={getResult} />
+			<RichEditor ref={richEditor} content={DefaultContent} />
 			<div className='block'>
 				<div className='col'>
 					<button type='button' onClick={getResult}>
@@ -81,4 +69,4 @@ const Editor = () => {
 		</Content>
 	);
 };
-export default Editor;
+export default MemberEditor;

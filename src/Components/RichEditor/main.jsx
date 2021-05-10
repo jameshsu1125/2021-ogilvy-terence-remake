@@ -1,12 +1,17 @@
 import { useState, forwardRef, useImperativeHandle } from 'react';
 import { Editor } from 'react-draft-wysiwyg';
-import { EditorState, convertToRaw } from 'draft-js';
+import { EditorState, convertToRaw, ContentState, convertFromHTML } from 'draft-js';
 import DraftToHtml from 'draftjs-to-html';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import './main.less';
 
 const RichEditor = forwardRef((props, ref) => {
-	const [editorState, seteditorState] = useState(EditorState.createEmpty());
+	const { content } = props;
+	const defaultContent = content
+		? EditorState.createWithContent(ContentState.createFromBlockArray(convertFromHTML(content)))
+		: EditorState.createEmpty();
+
+	const [editorState, seteditorState] = useState(defaultContent);
 	const onEditorStateChange = (e) => {
 		seteditorState({ editorState: e });
 	};
@@ -22,6 +27,7 @@ const RichEditor = forwardRef((props, ref) => {
 	return (
 		<div className='Editor'>
 			<Editor
+				defaultEditorState={defaultContent}
 				initialEditorState={editorState}
 				wrapperClassName='demo-wrapper'
 				editorClassName='demo-editor'

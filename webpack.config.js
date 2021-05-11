@@ -20,29 +20,52 @@ module.exports = () => {
 		module: {
 			rules: [
 				{ test: /\.jsx?$/, exclude: /node_modules/, use: [{ loader: 'babel-loader' }] },
-				{ test: /\.(less|css)$/, use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'] },
+				{
+					test: /\.(less|css)$/,
+					use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
+				},
 				{
 					test: /\.(png|jpg|gif|svg)$/i,
-					use: [{ loader: 'file-loader', options: { name: `${Folder}/image/[path][name].[ext]`, context: 'src' } }],
+					use: [
+						{
+							loader: 'file-loader',
+							options: { name: `${Folder}/image/[path][name].[ext]`, context: 'src' },
+						},
+					],
 				},
 				{
 					test: /\.(ogv|mp4)$/,
-					use: [{ loader: 'file-loader', options: { name: `${Folder}/video/[path][name].[ext]`, context: 'src' } }],
+					use: [
+						{
+							loader: 'file-loader',
+							options: { name: `${Folder}/video/[path][name].[ext]`, context: 'src' },
+						},
+					],
 				},
 				{
 					test: /\.(wav|mp3)$/,
-					use: [{ loader: 'file-loader', options: { name: `${Folder}/audio/[path][name].[ext]`, context: 'src' } }],
+					use: [
+						{
+							loader: 'file-loader',
+							options: { name: `${Folder}/audio/[path][name].[ext]`, context: 'src' },
+						},
+					],
 				},
 				{
 					test: /\.(eot|woff|woff2|ttf)$/,
-					use: [{ loader: 'file-loader', options: { name: `${Folder}/font/[path][name].[ext]`, context: 'src' } }],
+					use: [
+						{
+							loader: 'file-loader',
+							options: { name: `${Folder}/font/[path][name].[ext]`, context: 'src' },
+						},
+					],
 				},
 			],
 		},
 		output: {
 			path: path.resolve(__dirname, 'dist'),
 			filename: `${Folder}/js/[name].min.js`,
-			publicPath: '/',
+			publicPath: './',
 		},
 		resolve: {
 			extensions: ['*', '.js', '.jsx'],

@@ -3,7 +3,8 @@ import { useEffect, useRef } from 'react';
 import Content from '../Components/content/main';
 import Headline from '../Components/Headline/main';
 import RichEditor from '../Components/RichEditor/main';
-import { FunctionList as Data, DefaultNewsContent as DefaultContent } from './data';
+import { FunctionList as Data } from './data';
+import { NewsContent } from '../Setting/config';
 import './newsEditor.less';
 
 const defaultValueOfTitle = '第{n}屆奧美林宗緯紅領帶實習計畫{開始報名}';
@@ -58,7 +59,7 @@ const MemberEditor = () => {
 					</label>
 				</div>
 			</div>
-			<RichEditor ref={richEditor} content={DefaultContent} />
+			<RichEditor ref={richEditor} content={NewsContent} />
 			<div className='block'>
 				<div className='col'>
 					<button type='button' onClick={getResult}>

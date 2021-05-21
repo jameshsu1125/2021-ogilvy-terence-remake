@@ -4,7 +4,7 @@ logs
 npm-debug.log*
 
 # Ignore artifacts:
-dist/
+# dist/
 .next/
 template/
 

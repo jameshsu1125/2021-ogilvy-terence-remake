@@ -1,10 +1,11 @@
 /* eslint-disable implicit-arrow-linebreak */
-import { useEffect, useRef } from 'react';
+import Copy from 'copy-text-to-clipboard';
+import { useRef } from 'react';
 import Content from '../Components/content/main';
 import Headline from '../Components/Headline/main';
 import RichEditor from '../Components/RichEditor/main';
-import { FunctionList as Data } from './data';
 import { NewsContent } from '../Setting/config';
+import { FunctionList as Data } from './data';
 import './newsEditor.less';
 
 const defaultValueOfTitle = '第{n}屆奧美林宗緯紅領帶實習計畫{開始報名}';
@@ -36,10 +37,13 @@ const MemberEditor = () => {
 		const html = target.getHTML?.();
 		const { value: title } = titleRef.current;
 		const data = { html, title };
-		// eslint-disable-next-line no-console
-		console.log(data);
+		const output = JSON.stringify(data);
+		Copy(output);
+		const { confirm } = window;
+		if (confirm('前往更新？')) {
+			console.log('ok');
+		}
 	};
-	useEffect(() => {});
 
 	return (
 		<Content id='NewsEditor'>
@@ -63,7 +67,7 @@ const MemberEditor = () => {
 			<div className='block'>
 				<div className='col'>
 					<button type='button' onClick={getResult}>
-						新增心得
+						複製並更新
 					</button>
 				</div>
 			</div>

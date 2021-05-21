@@ -97,7 +97,7 @@ module.exports = () => {
 	if (NODE_ENV === 'production') {
 		setting.plugins.push(
 			new CleanWebpackPlugin({
-				cleanOnceBeforeBuildPatterns: ['**/*', '!img'],
+				cleanOnceBeforeBuildPatterns: ['**/*', '!img/**', '!data/**'],
 			}),
 		);
 	}

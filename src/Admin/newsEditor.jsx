@@ -1,10 +1,10 @@
 /* eslint-disable implicit-arrow-linebreak */
 import Copy from 'copy-text-to-clipboard';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useShallowCompareEffect } from 'react-use';
 import Content from '../Components/content/main';
 import Headline from '../Components/Headline/main';
 import RichEditor from '../Components/RichEditor/main';
-import { NewsContent } from '../Setting/config';
 import { FunctionList as Data } from './data';
 import './newsEditor.less';
 
@@ -40,10 +40,28 @@ const MemberEditor = () => {
 		const output = JSON.stringify(data);
 		Copy(output);
 		const { confirm } = window;
-		if (confirm('前往更新？')) {
+		if (confirm('已經複製成功')) {
 			console.log('ok');
 		}
 	};
+
+	const [contents, setContents] = useState({});
+	const [html, setHtml] = useState('');
+
+	useEffect(() => {
+		fetch('./data/news.json')
+			.then((e) => e.json())
+			.then((result) => {
+				setContents(result);
+			});
+		return () => {};
+	}, []);
+
+	useShallowCompareEffect(() => {
+		if (Object.keys(contents).length > 0) {
+			setHtml(contents.html);
+		}
+	}, [contents]);
 
 	return (
 		<Content id='NewsEditor'>
@@ -63,7 +81,7 @@ const MemberEditor = () => {
 					</label>
 				</div>
 			</div>
-			<RichEditor ref={richEditor} content={NewsContent} />
+			{html && <RichEditor ref={richEditor} content={html} />}
 			<div className='block'>
 				<div className='col'>
 					<button type='button' onClick={getResult}>

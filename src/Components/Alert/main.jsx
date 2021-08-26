@@ -1,23 +1,28 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable no-useless-escape */
 import Parser from 'html-react-parser';
-import { News, NewsContent } from '../../Setting/config';
+import { useEffect, useState, useRef } from 'react';
+import { useShallowCompareEffect } from 'react-use';
 import './main.less';
 
-const splitCodeTag = (html) => {
+const splitCodeTag = (container, html) => {
 	const regex = /(?<=\<code\>)(\s*.*\s*)(?=\<\/code\>)/g;
 	let code = html.replace(regex, '<|>');
 	const content = html.match(regex);
 
-	content.forEach((e) => {
+	content?.forEach((e) => {
 		let item = '';
-		e.split(' ')
-			.join('')
-			.split(',')
-			.forEach((name) => {
-				item += `<span>${name}</span>`;
-			});
+		const splitItem = e.split(' ').join('').split(',');
+
+		splitItem.forEach((name) => {
+			item += `<span>${name}</span>`;
+		});
+
 		code = code.replace('<|>', item);
+
+		if (splitItem.length < 5) {
+			container.current.classList.add('less5Items');
+		}
 	});
 	return code;
 };
@@ -25,22 +30,45 @@ const splitCodeTag = (html) => {
 const Alert = (props) => {
 	const { setAlert } = props;
 
+	const containerRef = useRef();
+
+	const [contents, setContents] = useState({});
+	const [title, setTitle] = useState('');
+	const [html, setHtml] = useState('');
+
 	const close = () => setAlert(false);
+
+	useEffect(() => {
+		fetch('./data/news.json')
+			.then((e) => e.json())
+			.then((result) => {
+				setContents(result);
+			});
+
+		const keyClose = (e) => {
+			const { keyCode } = e;
+			if (keyCode === 27) close();
+		};
+
+		window.addEventListener('keydown', keyClose);
+	}, []);
+
+	useShallowCompareEffect(() => {
+		if (Object.keys(contents).length > 0) {
+			setTitle(contents.title);
+			setHtml(contents.html);
+		}
+	}, [contents]);
 
 	return (
 		<div className='Alert'>
-			<div className='alert-container'>
+			<div className='backgroundColor' onClick={close} onKeyPress={close} role='none' />
+			<div ref={containerRef} className='alert-container'>
 				<div className='title'>
-					<h1>{News}</h1>
+					<h1>{title}</h1>
 				</div>
-				{Parser(splitCodeTag(NewsContent.split('↵').join('<br />')))}
-				<div
-					className='alert-close'
-					onClick={close}
-					onKeyPress={close}
-					role='button'
-					tabIndex='0'
-				/>
+				{html && Parser(splitCodeTag(containerRef, html.split('↵').join('<br />')))}
+				<div className='alert-close' onClick={close} onKeyPress={close} role='none' />
 			</div>
 		</div>
 	);

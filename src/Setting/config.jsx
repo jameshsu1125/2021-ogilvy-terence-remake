@@ -92,7 +92,3 @@ export const HashChange = () => {
 	onHashChange();
 	window.addEventListener('hashchange', () => onHashChange());
 };
-
-// fetch('./data/news.json').then((e) => {
-// 	console.log(e);
-// });

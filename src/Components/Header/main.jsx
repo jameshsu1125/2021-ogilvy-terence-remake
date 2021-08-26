@@ -1,9 +1,28 @@
 /* eslint-disable no-irregular-whitespace */
-import { News } from '../../Setting/config';
+import { useEffect, useState } from 'react';
+import { useShallowCompareEffect } from 'react-use';
 import './main.less';
 
 const Header = (props) => {
 	const { setAlert } = props;
+
+	const [contents, setContents] = useState({});
+	const [title, setTitle] = useState('');
+
+	useEffect(() => {
+		fetch('./data/news.json')
+			.then((e) => e.json())
+			.then((result) => {
+				setContents(result);
+			});
+		return () => {};
+	}, []);
+
+	useShallowCompareEffect(() => {
+		if (Object.keys(contents).length > 0) {
+			setTitle(contents.title);
+		}
+	}, [contents]);
 
 	const openAlert = () => {
 		setAlert(true);
@@ -19,7 +38,7 @@ const Header = (props) => {
 				<div className='col'>
 					<div className='news' onClick={openAlert} onKeyPress={openAlert} role='none'>
 						<span>最新消息</span>
-						{News}
+						{title}
 					</div>
 					<div className='theme'>
 						<div className='lipsum'>

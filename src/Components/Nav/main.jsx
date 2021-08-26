@@ -24,7 +24,13 @@ const Nav = () => {
 			else window.open(e.url);
 		};
 		const getContents = (e, i) => (
-			<div key={e.name} onClick={() => linkTo(e)} onKeyPress={() => linkTo(e)} role='button' tabIndex={i}>
+			<div
+				key={e.name}
+				onClick={() => linkTo(e)}
+				onKeyPress={() => linkTo(e)}
+				role='button'
+				tabIndex={i}
+			>
 				{e.name}
 			</div>
 		);
@@ -46,7 +52,13 @@ const Nav = () => {
 			return (
 				<div className='ham-content'>
 					{appendMenu(true)}
-					<div className='close' onClick={() => close()} onKeyPress={() => close()} role='button' tabIndex='0'>
+					<div
+						className='close'
+						onClick={() => close()}
+						onKeyPress={() => close()}
+						role='button'
+						tabIndex='0'
+					>
 						<div />
 						<div />
 					</div>
@@ -56,9 +68,13 @@ const Nav = () => {
 		return false;
 	};
 
+	const toRoot = () => {
+		window.location.href = './';
+	};
+
 	return (
 		<nav>
-			<div className='logo' />
+			<div className='logo' onClick={toRoot} role='none' />
 			<div className='menu'>{appendMenu()}</div>
 			<div
 				className='ham'

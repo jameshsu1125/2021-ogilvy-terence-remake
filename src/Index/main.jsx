@@ -21,29 +21,23 @@ const Index = () => {
 		HashChange();
 
 		const { data, timestamp } = Storage.get('alert');
-
 		if (!data || timestamp >= time) {
 			setAlert(true);
 			Storage.set('alert', true);
 		}
 	}, []);
 
-	const appendAlert = () => {
-		if (alert) return <Alert />;
-		return false;
-	};
-
 	return (
 		<div id='index'>
 			<Nav />
-			<Header />
+			<Header setAlert={setAlert} />
 			<Menu />
 			<KnowTerence />
 			<TerenceInMyEyes />
 			<SevenAttributes />
 			<TerenceQuotations />
 			<Footer />
-			{appendAlert()}
+			{alert && <Alert setAlert={setAlert} />}
 		</div>
 	);
 };

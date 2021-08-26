@@ -10,8 +10,9 @@ export const NewsContent = `<h3>筆試名單<br>依筆畫順序排列</h3>
 <p>台灣時間 4月27日 18:00 – 21:00<br>線上筆試連結將於上述時間寄送至報名時提供之電子信箱<br>請自行確認電子信箱運作正常</p>
 <p>入選筆試者將同步發送筆試通知信，4/16日前仍未收到通知信或有其他問題<br>請來信 <a href="mailto:robertcl.kung@ogilvy.com" target="_self">robertcl.kung@ogilvy.com</a>詢問</p>
 `;
-// export const DisableAlertDuration = 1000 * 60 * 60; // 1小時
-export const AlertDisableTimestamp = 1000;
+
+export const AlertDisableTimestamp = 1000 * 60 * 60; // 1小時
+// export const AlertDisableTimestamp = 1000;
 
 export const HtmlName = [
 	{ name: '認識林宗緯', fileName: 'index' },
@@ -92,6 +93,6 @@ export const HashChange = () => {
 	window.addEventListener('hashchange', () => onHashChange());
 };
 
-fetch('https://jameshsu1125.github.io/2021-ogilvy-terence-remake/data/news.json').then((e) => {
-	console.log(e);
-});
+// fetch('./data/news.json').then((e) => {
+// 	console.log(e);
+// });

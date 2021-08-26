@@ -1,10 +1,12 @@
+const CopyPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 const Folder = 'bundle'; // 自動產生檔案的folder
-const { HotModuleReplacementPlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Meta = require('./template/template.meta');
 const path = require('path');
-const { NODE_ENV } = process.env;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { HotModuleReplacementPlugin } = require('webpack');
+const { NODE_ENV } = process.env;
 
 module.exports = () => {
 	const setting = {
@@ -69,9 +71,21 @@ module.exports = () => {
 		},
 		resolve: {
 			extensions: ['*', '.js', '.jsx'],
-			alias: { root: path.resolve(__dirname, 'src/') },
+			alias: { src: path.resolve(__dirname, 'src/') },
 		},
-		plugins: [new HotModuleReplacementPlugin()],
+		plugins: [
+			new HotModuleReplacementPlugin(),
+			new Dotenv({
+				path: path.resolve(__dirname, '.env'), // use .env variable as the local dev environment
+				allowEmptyValues: true, // allow empty variables (e.g. `FOO=`) (treat it as empty string, rather than missing)
+				systemvars: true, // load all the predefined 'process.env' variables which will trump anything local per dotenv specs.
+				defaults: true, // load '.env.defaults' as the default values if empty.
+			}),
+			new CopyPlugin({
+				patterns: [{ from: 'public' }],
+			}),
+			new CleanWebpackPlugin(),
+		],
 		devtool: NODE_ENV === 'production' ? false : 'cheap-module-source-map',
 		devServer: {
 			contentBase: './dist',
@@ -93,14 +107,6 @@ module.exports = () => {
 			}),
 		);
 	});
-
-	if (NODE_ENV === 'production') {
-		setting.plugins.push(
-			new CleanWebpackPlugin({
-				cleanOnceBeforeBuildPatterns: ['**/*', '!img/**', '!data/**'],
-			}),
-		);
-	}
 
 	return setting;
 };

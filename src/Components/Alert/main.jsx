@@ -1,6 +1,6 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable no-useless-escape */
 import Parser from 'html-react-parser';
-import { useEffect } from 'react';
 import { News, NewsContent } from '../../Setting/config';
 import './main.less';
 
@@ -22,16 +22,25 @@ const splitCodeTag = (html) => {
 	return code;
 };
 
-const Alert = ({ title = News, content = NewsContent }) => {
-	useEffect(() => {}, []);
+const Alert = (props) => {
+	const { setAlert } = props;
+
+	const close = () => setAlert(false);
+
 	return (
 		<div className='Alert'>
 			<div className='alert-container'>
 				<div className='title'>
-					<h1>{title}</h1>
+					<h1>{News}</h1>
 				</div>
-				{Parser(splitCodeTag(content.split('↵').join('<br />')))}
-				<div className='alert-close' />
+				{Parser(splitCodeTag(NewsContent.split('↵').join('<br />')))}
+				<div
+					className='alert-close'
+					onClick={close}
+					onKeyPress={close}
+					role='button'
+					tabIndex='0'
+				/>
 			</div>
 		</div>
 	);

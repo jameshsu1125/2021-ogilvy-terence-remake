@@ -51,6 +51,10 @@ const Alert = (props) => {
 		};
 
 		window.addEventListener('keydown', keyClose);
+
+		return () => {
+			window.removeEventListener('keydown', keyClose);
+		};
 	}, []);
 
 	useShallowCompareEffect(() => {

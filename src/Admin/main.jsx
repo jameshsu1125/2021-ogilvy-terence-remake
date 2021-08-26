@@ -6,6 +6,7 @@ import { FunctionList as Data } from './data';
 import './main.less';
 import MemberEditor from './memberEditor';
 import NewsEditor from './newsEditor';
+import ScheduleEditor from './scheduleEditor';
 import PageSelect from './pageSelect';
 
 const Admin = () => {
@@ -22,7 +23,7 @@ const Admin = () => {
 				return <NewsEditor />;
 
 			case schedule.id:
-				return false;
+				return <ScheduleEditor />;
 
 			case members.id:
 				return <MemberEditor />;

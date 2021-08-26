@@ -6,9 +6,10 @@ import Content from '../Components/content/main';
 import Headline from '../Components/Headline/main';
 import RichEditor from '../Components/RichEditor/main';
 import { FunctionList as Data } from './data';
-import './newsEditor.less';
+import './scheduleEditor.less';
 
-const defaultValueOfTitle = '第{n}屆奧美林宗緯紅領帶實習計畫{開始報名}';
+const defaultValueOfMonth = '2021.7-8';
+const defaultGoogleFormURL = 'https://forms.gle/rK4ZagryVcb77BjbA';
 
 const onFocus = (e) => {
 	const { target } = e;
@@ -28,15 +29,17 @@ const onBlur = (e) => {
 	}
 };
 
-const MemberEditor = () => {
-	const richEditor = useRef(null);
-	const titleRef = useRef();
+const ScheduleEditor = () => {
+	const dateRef = useRef();
+	const googleFormURLRef = useRef();
+	const richEditor = useRef();
 
 	const getResult = () => {
 		const { current: target } = richEditor;
 		const html = target.getHTML?.();
-		const { value: title } = titleRef.current;
-		const data = { html, title };
+		const { value: date } = dateRef.current;
+		const { value: url } = googleFormURLRef.current;
+		const data = { html, date, url };
 		const output = JSON.stringify(data);
 		Copy(output);
 		const { confirm } = window;
@@ -46,10 +49,12 @@ const MemberEditor = () => {
 	};
 
 	const [contents, setContents] = useState({});
-	const [html, setHtml] = useState('');
+	const [html, setHtml] = useState(false);
+	const [date, setDate] = useState(false);
+	const [url, setURL] = useState(false);
 
 	useEffect(() => {
-		fetch('./data/news.json')
+		fetch('./data/schedule.json')
 			.then((e) => e.json())
 			.then((result) => {
 				setContents(result);
@@ -60,24 +65,43 @@ const MemberEditor = () => {
 	useShallowCompareEffect(() => {
 		if (Object.keys(contents).length > 0) {
 			setHtml(contents.html);
+			setDate(contents.date);
+			setURL(contents.url);
 		}
 	}, [contents]);
 
 	return (
-		<Content id='NewsEditor'>
+		<Content id='ScheduleEditor'>
 			<Headline text={Data[0].label} theme='red' />
 			<div className='block'>
 				<div className='col'>
-					<label htmlFor='member'>
-						新聞標題：
-						<input
-							ref={titleRef}
-							data-name={defaultValueOfTitle}
-							onBlur={onBlur}
-							onFocus={onFocus}
-							id='member'
-							defaultValue={defaultValueOfTitle}
-						/>
+					<label htmlFor='date'>
+						年級填寫：
+						{date && (
+							<input
+								ref={dateRef}
+								data-name={defaultValueOfMonth}
+								onBlur={onBlur}
+								onFocus={onFocus}
+								id='date'
+								defaultValue={defaultValueOfMonth}
+							/>
+						)}
+					</label>
+				</div>
+				<div className='col'>
+					<label htmlFor='googleFormURL'>
+						報名連結：
+						{url && (
+							<input
+								ref={googleFormURLRef}
+								data-name={defaultGoogleFormURL}
+								onBlur={onBlur}
+								onFocus={onFocus}
+								id='googleFormURL'
+								defaultValue={defaultGoogleFormURL}
+							/>
+						)}
 					</label>
 				</div>
 			</div>
@@ -92,4 +116,4 @@ const MemberEditor = () => {
 		</Content>
 	);
 };
-export default MemberEditor;
+export default ScheduleEditor;

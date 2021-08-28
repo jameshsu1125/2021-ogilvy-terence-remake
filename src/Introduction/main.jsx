@@ -24,7 +24,7 @@ const Introduction = () => {
 	return (
 		<div id='introduction'>
 			<Nav />
-			<Header />
+			<Header setAlert={setAlert} />
 			<Menu />
 			<ProjectPurpose />
 			<GrantProgram />

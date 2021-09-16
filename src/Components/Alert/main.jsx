@@ -6,7 +6,9 @@ import { useShallowCompareEffect } from 'react-use';
 import './main.less';
 
 const splitCodeTag = (container, html) => {
-	const regex = /(?<=\<code\>)(\s*.*\s*)(?=\<\/code\>)/g;
+	// const regex = /(?<=\<code\>)(\s*.*\s*)(?=\<\/code\>)/g; // not working on safari
+	const regex = /(?:\<code\>)(\s*.*\s*)(?:\<\/code\>)/g;
+
 	let code = html.replace(regex, '<|>');
 	const content = html.match(regex);
 
@@ -19,6 +21,7 @@ const splitCodeTag = (container, html) => {
 		});
 
 		code = code.replace('<|>', item);
+		code = code.split('<code>').join('').split('</code>').join('');
 
 		if (splitItem.length < 5) {
 			container.current.classList.add('less5Items');

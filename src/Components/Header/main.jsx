@@ -24,9 +24,7 @@ const Header = (props) => {
 		}
 	}, [contents]);
 
-	const openAlert = () => {
-		setAlert(true);
-	};
+	const openAlert = () => setAlert(true);
 
 	return (
 		<header>

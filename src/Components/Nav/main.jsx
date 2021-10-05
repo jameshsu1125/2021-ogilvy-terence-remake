@@ -13,9 +13,7 @@ const Nav = () => {
 		{ name: '受獎助者', url: './experience.html' },
 	]);
 
-	const showHamContent = () => {
-		setHamContent(true);
-	};
+	const showHamContent = () => setHamContent(true);
 
 	const appendMenu = (isHamContent = false) => {
 		const linkTo = (e) => {

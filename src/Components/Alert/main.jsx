@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable no-useless-escape */
 import Parser from 'html-react-parser';
 import { useEffect, useState, useRef } from 'react';
@@ -6,7 +5,6 @@ import { useShallowCompareEffect } from 'react-use';
 import './main.less';
 
 const splitCodeTag = (container, html) => {
-	// const regex = /(?<=\<code\>)(\s*.*\s*)(?=\<\/code\>)/g; // not working on safari
 	const regex = /(?:\<code\>)(\s*.*\s*)(?:\<\/code\>)/g;
 
 	let code = html.replace(regex, '<|>');

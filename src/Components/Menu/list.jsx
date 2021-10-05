@@ -4,17 +4,27 @@ const List = ({ title, list, pageIndex }) => {
 	const addHash = (e) => {
 		const pageName = HtmlName[pageIndex];
 		const { fileName } = pageName;
-		window.location.href = `${fileName === 'index' ? './' : fileName}${fileName === 'index' ? '' : '.html'}#${e}`;
+		window.location.href = `${fileName === 'index' ? './' : fileName}${
+			fileName === 'index' ? '' : '.html'
+		}#${e}`;
 	};
 	const pageClicked = () => {
 		const pageName = HtmlName[pageIndex];
 		const { fileName } = pageName;
-		console.log(fileName);
-		window.location.href = `${fileName === 'index' ? './' : fileName}${fileName === 'index' ? '' : '.html'}`;
+
+		window.location.href = `${fileName === 'index' ? './' : fileName}${
+			fileName === 'index' ? '' : '.html'
+		}`;
 	};
 	return (
 		<div className='menu-container'>
-			<div className='menu-main' onClick={pageClicked} onKeyPress={pageClicked} role='button' tabIndex='0'>
+			<div
+				className='menu-main'
+				onClick={pageClicked}
+				onKeyPress={pageClicked}
+				role='button'
+				tabIndex='0'
+			>
 				<div className='ico' />
 				<div className='title'>{title || ''}</div>
 			</div>

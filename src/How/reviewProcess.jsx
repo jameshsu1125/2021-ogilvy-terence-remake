@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import Parser from 'html-react-parser';
 import { useEffect, useState } from 'react';
 import { useShallowCompareEffect } from 'react-use';
@@ -8,6 +7,7 @@ import ReviewStep from '../Components/ReviewStep/main';
 import { ReviewProcessData as Data } from './data';
 import './reviewProcess.less';
 
+// ! => 如何申請 / 審核流程
 const ReviewProcess = () => {
 	const [contents, setContents] = useState({});
 	const [html, setHtml] = useState(false);

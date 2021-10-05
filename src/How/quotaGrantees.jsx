@@ -1,8 +1,8 @@
-/* eslint-disable max-len */
 import Content from '../Components/content/main';
 import Headline from '../Components/Headline/main';
 import './quotaGrantees.less';
 
+// ! => 如何申請 / 獎助資格
 const QuotaGrantees = () => (
 	<Content id='quotaGrantees'>
 		<Headline text='獎助對象名額與資格' theme='red' />

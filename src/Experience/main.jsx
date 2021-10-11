@@ -5,6 +5,8 @@ import Footer from '../Components/Footer/main';
 import Header from '../Components/Header/main';
 import Menu from '../Components/Menu/main';
 import Nav from '../Components/Nav/main';
+import InternshipExperience from './internshipExperience';
+import InternshipPhotos from './internshipPhotos';
 import { AlertDisableTimestamp as time, HashChange } from '../Setting/config';
 
 const Introduction = () => {
@@ -20,10 +22,12 @@ const Introduction = () => {
 	}, []);
 
 	return (
-		<div id='index'>
+		<div id='Experience'>
 			<Nav />
 			<Header setAlert={setAlert} />
 			<Menu />
+			<InternshipExperience />
+			<InternshipPhotos />
 			<Footer />
 			{alert && <Alert setAlert={setAlert} />}
 		</div>

@@ -1,7 +1,7 @@
 import Content from '../Components/content/main';
 import './pageSelect.less';
 
-import { FunctionList as Data } from './data';
+import { CATEGORY_SETTING as Data } from './data';
 
 const PageSelect = ({ onChange }) => {
 	const append = () =>

@@ -1,0 +1,66 @@
+@import url('../../Setting/color.less');
+.ExperienceArticle {
+	box-sizing: border-box;
+	padding: 15px 20px;
+	width: 100%;
+	background-color: @ogilvy_white;
+	color: @ogilvy_black;
+
+	& > p {
+		text-align: justify;
+		font-size: @desktop_p_fontSize;
+		line-height: @desktop_p_lineheight;
+		margin-block-start: 3rem;
+		margin-block-end: 3rem;
+	}
+
+	& > a:visited,
+	a {
+		color: @ogilvy_red;
+	}
+
+	& > h3 {
+		border-left: solid 5px @ogilvy_black;
+		text-indent: 10px;
+		font-size: 18px;
+
+		span {
+			font-size: smaller;
+		}
+	}
+
+	img {
+		max-width: 626px;
+	}
+
+	ol,
+	ul {
+		margin: 3rem 0;
+		& > div,
+		i {
+			font-size: smaller;
+		}
+	}
+
+	figure {
+		position: relative;
+		margin-bottom: 35px;
+		margin: 20px 0;
+		background-color: #e5e5e5;
+		padding: 10px 20px;
+		box-sizing: border-box;
+
+		figcaption {
+			text-align: right;
+		}
+	}
+
+	h2 {
+		margin-block-end: -2rem;
+	}
+
+	& > figcaption {
+		margin-bottom: 3rem;
+		font-size: x-small;
+	}
+}

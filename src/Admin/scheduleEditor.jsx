@@ -5,7 +5,7 @@ import { useShallowCompareEffect } from 'react-use';
 import Content from '../Components/content/main';
 import Headline from '../Components/Headline/main';
 import RichEditor from '../Components/RichEditor/main';
-import { FunctionList as Data } from './data';
+import { CATEGORY_SETTING as Data } from './data';
 import './scheduleEditor.less';
 
 const defaultValueOfMonth = '2021.7-8';

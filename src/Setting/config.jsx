@@ -49,18 +49,18 @@ export const MenuList = [
 	{
 		name: '受獎助者',
 		list: [
-			{ name: '實習心得', id: '' },
-			{ name: '實習相片', id: '' },
+			{ name: '實習心得', id: 'internshipExperience' },
+			{ name: '實習相片', id: 'internshipPhotos' },
 		],
 	},
 ];
 
-export const ScrollTo = (element) => {
+export const ScrollTo = (element, offset = 0) => {
 	const { top } = Position(element);
 	const navHeight = window.innerWidth > 750 ? 65 : 130;
 	const menuHeight = window.innerWidth > 750 ? 227 : 320;
 
-	window.scrollTo(0, top - navHeight - menuHeight);
+	window.scrollTo(0, top - navHeight - menuHeight + offset);
 };
 
 export const HashChange = () => {

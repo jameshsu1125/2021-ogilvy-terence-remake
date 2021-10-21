@@ -5,7 +5,7 @@ import { useShallowCompareEffect } from 'react-use';
 import Content from '../Components/content/main';
 import Headline from '../Components/Headline/main';
 import RichEditor from '../Components/RichEditor/main';
-import { FunctionList as Data } from './data';
+import { CATEGORY_SETTING as Data } from './data';
 import './newsEditor.less';
 
 const defaultValueOfTitle = '第{n}屆奧美林宗緯紅領帶實習計畫{開始報名}';

@@ -1,5 +1,6 @@
+/* eslint-disable global-require */
 export const DefaultInternshipExperience = {
-	'1st': [
+	'2009 第一屆紅領帶': [
 		{
 			name: { cht: '詹曜維', eng: 'Tony Chan' },
 			html: '',
@@ -13,7 +14,7 @@ export const DefaultInternshipExperience = {
 			html: '',
 		},
 	],
-	'2nd': [
+	'2010 第二屆紅領帶': [
 		{
 			name: { cht: '蔡承翰', eng: 'York Tsai' },
 			html: '',
@@ -39,7 +40,7 @@ export const DefaultInternshipExperience = {
 			html: '',
 		},
 	],
-	'3rd': [
+	'2011 第三屆紅領帶': [
 		{
 			name: { cht: '邱彥蓁', eng: 'Krista Chiu' },
 			html: '',
@@ -57,8 +58,7 @@ export const DefaultInternshipExperience = {
 			html: '',
 		},
 	],
-
-	'4th': [
+	'2012 第四屆紅領帶': [
 		{
 			name: { cht: '溫婷瑩', eng: 'Tiff Wen' },
 			html: '',
@@ -80,7 +80,7 @@ export const DefaultInternshipExperience = {
 			html: '',
 		},
 	],
-	'5th': [
+	'2013 第五屆紅領帶': [
 		{
 			name: { cht: '錢雅莛', eng: 'Ria Chien' },
 			html: '',
@@ -94,7 +94,7 @@ export const DefaultInternshipExperience = {
 			html: '',
 		},
 	],
-	'6th': [
+	'2014 第六屆紅領帶': [
 		{
 			name: { cht: '錢雅莛', eng: 'Ria Chien' },
 			html: '',
@@ -108,7 +108,7 @@ export const DefaultInternshipExperience = {
 			html: '',
 		},
 	],
-	'7th': [
+	'2015 第七屆紅領帶': [
 		{
 			name: { cht: '何伯濤', eng: 'Casper Ho' },
 			html: '',
@@ -126,7 +126,7 @@ export const DefaultInternshipExperience = {
 			html: '',
 		},
 	],
-	'8th ': [
+	'2016 第八屆紅領帶 ': [
 		{
 			name: { cht: '林亞駿', eng: 'Will Lin' },
 			html: '',
@@ -136,7 +136,7 @@ export const DefaultInternshipExperience = {
 			html: '',
 		},
 	],
-	'9th ': [
+	'2017 第九屆紅領帶 ': [
 		{
 			name: { cht: '王薇涵', eng: 'Lotus Wang' },
 			html: '',
@@ -154,7 +154,7 @@ export const DefaultInternshipExperience = {
 			html: '',
 		},
 	],
-	'10th ': [
+	'2018 第十屆紅領帶': [
 		{
 			name: { cht: '李承恩', eng: 'Ben Lee' },
 			html: '',
@@ -164,68 +164,68 @@ export const DefaultInternshipExperience = {
 			html: '',
 		},
 	],
-	'11th ': [
+	'2019 第十一屆紅領帶': [
 		{
 			name: { cht: '林堉涵', eng: 'Pi Lin' },
-			html: '',
+			html: require('./data/11th/data').林堉涵,
 		},
 		{
 			name: { cht: '劉亭妤', eng: 'Amy Liu' },
-			html: '',
+			html: require('./data/11th/data').劉亭妤,
 		},
 		{
 			name: { cht: '方瑋婕', eng: 'Erin Fang' },
-			html: '',
+			html: require('./data/11th/data').方瑋婕,
 		},
 		{
 			name: { cht: '盛以和', eng: 'Finnick Sheng' },
-			html: '',
+			html: require('./data/11th/data').盛以和,
 		},
 		{
 			name: { cht: '方聖叡', eng: 'FangFang Fang' },
-			html: '',
+			html: require('./data/11th/data').方聖叡,
 		},
 		{
 			name: { cht: '徐聖勛', eng: 'Andy Hsu' },
-			html: '',
+			html: require('./data/11th/data').徐聖勛,
 		},
 		{
 			name: { cht: '陳冠蓉', eng: 'Rhonda Chen' },
-			html: '',
+			html: require('./data/11th/data').陳冠蓉,
 		},
 	],
-	'12th ': [
+	'2020 第十二屆紅領帶': [
 		{
 			name: { cht: '林奕瑄', eng: 'Grace Lin' },
-			html: '',
+			html: require('./data/12th/data').林奕瑄,
 		},
 		{
 			name: { cht: '鄭琮文', eng: 'Win-Win Cheng' },
-			html: '',
+			html: require('./data/12th/data').鄭琮文,
 		},
 		{
 			name: { cht: '賴彥廷', eng: 'Tim Lai' },
-			html: '',
+			html: require('./data/12th/data').賴彥廷,
 		},
 		{
 			name: { cht: '許茹涵', eng: 'Hannah Hsu' },
-			html: '',
+			html: require('./data/12th/data').許茹涵,
 		},
 		{
 			name: { cht: '邱子瑜', eng: 'Darren Chiu' },
-			html: '',
+			html: require('./data/12th/data').邱子瑜,
 		},
 		{
 			name: { cht: '林芝羽', eng: 'Maggie Lin' },
-			html: '',
+			html: require('./data/12th/data').林芝羽,
 		},
 		{
 			name: { cht: '吳若慈', eng: 'Rosy Wu' },
-			html: '',
+			html: require('./data/12th/data').吳若慈,
 		},
 		{
 			name: { cht: '黃少甫', eng: 'Frank Huang' },
-			html: '',
+			html: require('./data/12th/data').黃少甫,
 		},
 	],
 };

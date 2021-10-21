@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Footer from '../Components/Footer/main';
 import Nav from '../Components/Nav/main';
 import { HashChange } from '../Setting/config';
-import { FunctionList as Data } from './data';
+import { CATEGORY_SETTING as Data } from './data';
 import './main.less';
 import MemberEditor from './memberEditor';
 import NewsEditor from './newsEditor';

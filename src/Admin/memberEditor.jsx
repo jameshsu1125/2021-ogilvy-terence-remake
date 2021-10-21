@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import Content from '../Components/content/main';
 import Headline from '../Components/Headline/main';
 import RichEditor from '../Components/RichEditor/main';
-import { FunctionList as Data } from './data';
+import { CATEGORY_SETTING as Data } from './data';
 import './memberEditor.less';
 
 const defaultValueOfMember = '王小明';

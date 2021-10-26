@@ -1,6 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable no-irregular-whitespace */
-/* eslint-disable max-len */
 const 林堉涵 = () => (
 	<>
 		<p>理性，是我的生活哲學。</p>

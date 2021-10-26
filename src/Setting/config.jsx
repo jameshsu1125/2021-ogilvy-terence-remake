@@ -50,7 +50,7 @@ export const MenuList = [
 		name: '受獎助者',
 		list: [
 			{ name: '實習心得', id: 'internshipExperience' },
-			{ name: '實習相片', id: 'internshipPhotos' },
+			// { name: '實習相片', id: 'internshipPhotos' },
 		],
 	},
 ];

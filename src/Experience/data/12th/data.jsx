@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 const 林奕瑄 = () => (
 	<>
 		<p>

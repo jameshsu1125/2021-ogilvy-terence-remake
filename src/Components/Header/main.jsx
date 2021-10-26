@@ -1,4 +1,3 @@
-/* eslint-disable no-irregular-whitespace */
 import { useEffect, useState } from 'react';
 import { useShallowCompareEffect } from 'react-use';
 import './main.less';

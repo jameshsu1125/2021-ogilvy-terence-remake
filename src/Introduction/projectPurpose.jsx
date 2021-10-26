@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import Content from '../Components/content/main';
 import Headline from '../Components/Headline/main';
 import './projectPurpose.less';

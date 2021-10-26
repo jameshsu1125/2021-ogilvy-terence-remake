@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import Slider from 'react-slick';
 import Content from '../Components/content/main';
 import Headline from '../Components/Headline/main';

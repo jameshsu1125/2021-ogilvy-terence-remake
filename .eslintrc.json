@@ -22,6 +22,18 @@
 		"jsx-quotes": [2, "prefer-single"],
 		"operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
 		"object-curly-newline": "off",
-		"react/react-in-jsx-scope": "off"
+		"react/react-in-jsx-scope": "off",
+		"react/jsx-one-expression-per-line": "off",
+		"global-require": "off",
+		"no-irregular-whitespace": "off",
+		"max-len": "off",
+		"react/jsx-props-no-spreading": [
+			0,
+			{
+				"html": "ignore",
+				"custom": "ignore",
+				"explicitSpread": "ignore"
+			}
+		]
 	}
 }

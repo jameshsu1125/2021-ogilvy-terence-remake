@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import { useState } from 'react';
 import { useShallowCompareEffect } from 'react-use';
 import './main.less';

@@ -1,4 +1,3 @@
-/* eslint-disable global-require */
 export const DefaultInternshipExperience = {
 	'2009 第一屆紅領帶': [
 		{

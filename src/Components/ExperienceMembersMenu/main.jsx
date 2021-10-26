@@ -1,22 +1,14 @@
-/* eslint-disable react/jsx-one-expression-per-line */
-import { useEffect } from 'react';
 import './main.less';
 
 const ExperienceMembersMenu = (props) => {
-	const { data, index, setTarget } = props;
-
-	useEffect(() => {}, []);
+	const { data, index, menuIndex, setMenuIndex, setTarget } = props;
 
 	return (
-		<div className={`experienceMembersMenu${index === 0 ? ' active' : ''}`}>
+		<div className={`experienceMembersMenu${menuIndex === index ? ' active' : ''}`}>
 			<div
 				className='title'
-				onClick={(e) => {
-					const { parentNode: target } = e.target;
-					const { className } = target;
-					const hasActiveClass = className.indexOf('active') >= 0;
-					if (hasActiveClass) target.classList.remove('active');
-					else target.classList.add('active');
+				onClick={() => {
+					setMenuIndex(index);
 				}}
 				role='none'
 			>

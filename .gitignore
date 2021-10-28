@@ -75,3 +75,6 @@ package-lock.json
 
 # Bundle output
 dist/
+
+# vscode debug
+.vscode/

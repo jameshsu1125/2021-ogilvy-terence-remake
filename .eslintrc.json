@@ -12,28 +12,27 @@
 		"ecmaVersion": 12,
 		"sourceType": "module"
 	},
-	"plugins": ["react"],
+	"plugins": ["react", "react-hooks"],
 	"rules": {
+		"operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
+		"react/function-component-definition": [0],
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
 		"indent": [2, "tab", { "SwitchCase": 1, "VariableDeclarator": 1 }],
-		"no-tabs": 0,
-		"react/prop-types": 0,
 		"react/jsx-indent": [2, "tab"],
 		"react/jsx-indent-props": [2, "tab"],
 		"jsx-quotes": [2, "prefer-single"],
-		"operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
-		"object-curly-newline": "off",
-		"react/react-in-jsx-scope": "off",
-		"react/jsx-one-expression-per-line": "off",
-		"global-require": "off",
-		"no-irregular-whitespace": "off",
-		"max-len": "off",
-		"react/jsx-props-no-spreading": [
-			0,
-			{
-				"html": "ignore",
-				"custom": "ignore",
-				"explicitSpread": "ignore"
-			}
-		]
+		"import/prefer-default-export": 0,
+		"object-curly-newline": 0,
+		"react/react-in-jsx-scope": 0,
+		"react/prop-types": 0,
+		"react/jsx-props-no-spreading": 0,
+		"no-tabs": 0,
+		"no-new": 0,
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"no-irregular-whitespace": 0,
+		"max-len": 0,
+		"react/jsx-one-expression-per-line": 0,
+		"global-require": 0
 	}
 }

@@ -557,7 +557,6 @@ const 黃少甫 = () => (
 		</p>
 		<img src='./data/experienceArticle/12th/27.jpg' alt='' />
 		和奧美最愛的「有錢又有力」合照，但笑得太開心了，法令紋比雞排妹的乳溝還深。
-		<p />
 	</>
 );
 

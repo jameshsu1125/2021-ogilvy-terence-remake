@@ -2,40 +2,37 @@
 
 .phase {
 	position: relative;
-
 	display: flex;
-	justify-content: flex-start;
 	align-items: center;
+	justify-content: flex-start;
 
 	margin-block-start: 40px;
 	margin-block-end: 40px;
-
 	@indent: 45px;
+
 	&::before {
 		position: relative;
+		top: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: @indent * 0.6;
 		width: 45px;
 		height: 45px;
-		content: 'phase';
-		top: 0;
-		background-color: #fff;
 		border-radius: 50%;
+		background-color: #fff;
 		color: @ogilvy_black;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		content: 'phase';
 		text-indent: @indent;
-		margin-right: @indent * 0.6;
-		font-size: 22px;
-
-		font-family: 'Baskerville', sans-serif;
 		font-style: italic;
+		font-size: 22px;
+		font-family: 'Baskerville', sans-serif;
 	}
 
 	& > div:nth-child(1) {
-		font-family: 'Baskerville', sans-serif;
 		font-style: italic;
 		font-size: 20px;
+		font-family: 'Baskerville', sans-serif;
 	}
 
 	& > div {

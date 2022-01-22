@@ -229,7 +229,7 @@ export const DefaultInternshipExperience = {
 	],
 	'2021 第十三屆紅領帶': [
 		{
-			name: { cht: '鄭暐翰', eng: 'Wilson Zheng' },
+			name: { cht: '鄭暐翰', eng: 'Wilson Cheng' },
 			html: require('./data/13th/data').鄭暐翰,
 		},
 		{
@@ -245,11 +245,11 @@ export const DefaultInternshipExperience = {
 			html: require('./data/13th/data').劉昱伶,
 		},
 		{
-			name: { cht: '洪名遠', eng: 'Andre Hong' },
+			name: { cht: '洪名遠', eng: 'Andre Hung' },
 			html: require('./data/13th/data').洪名遠,
 		},
 		{
-			name: { cht: '詹蕎', eng: 'Joanne Zhan' },
+			name: { cht: '詹蕎', eng: 'Joanne Chan' },
 			html: require('./data/13th/data').詹蕎,
 		},
 	],

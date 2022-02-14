@@ -41,7 +41,7 @@ const InternshipExperience = () => {
 
 	return (
 		<Content id='internshipExperience'>
-			<Headline text='實習心得' theme='red' />
+			<Headline text='培訓心得' theme='red' />
 			<div className='grid'>
 				<div>
 					{Object.entries(Data)

@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { HtmlName } from '../../Setting/config';
+
 import './main.less';
 
 const Nav = () => {
@@ -7,10 +9,10 @@ const Nav = () => {
 		{ name: '回首頁', url: './' },
 		{ name: '奧美大中國', url: 'https://www.ogilvy.com.tw/zh/index.aspx' },
 		{ name: '台灣奧美粉絲團', url: 'https://www.facebook.com/OgilvyTaiwan/' },
-		{ name: '認識林宗緯', url: './' },
-		{ name: '實習計畫介紹', url: './introduction.html' },
-		{ name: '如何申請', url: './how.html' },
-		{ name: '受獎助者', url: './experience.html' },
+		{ name: HtmlName[0].name, url: './' },
+		{ name: HtmlName[1].name, url: `./${HtmlName[1].fileName}.html` },
+		{ name: HtmlName[2].name, url: `./${HtmlName[2].fileName}.html` },
+		{ name: HtmlName[3].name, url: `./${HtmlName[3].fileName}.html` },
 	]);
 
 	const showHamContent = () => setHamContent(true);

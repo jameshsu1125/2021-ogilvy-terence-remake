@@ -11,14 +11,14 @@ export const AlertDisableTimestamp = 1000 * 60 * 60; // 1小時
 
 export const HtmlName = [
 	{ name: '認識林宗緯', fileName: 'index' },
-	{ name: '實習計畫介紹', fileName: 'introduction' },
+	{ name: '計畫介紹', fileName: 'introduction' },
 	{ name: '如何申請', fileName: 'how' },
 	{ name: '受獎助者', fileName: 'experience' },
 ];
 
 export const MenuList = [
 	{
-		name: '認識林宗緯',
+		name: HtmlName[0].name,
 		list: [
 			{ name: '認識林宗緯', id: 'knowTerence' },
 			{ name: '我眼中的林宗緯', id: 'terenceInMyEyes' },
@@ -27,14 +27,14 @@ export const MenuList = [
 		],
 	},
 	{
-		name: '實習計畫介紹',
+		name: HtmlName[1].name,
 		list: [
 			{ name: '計劃宗旨', id: 'projectPurpose' },
 			{ name: '獎助計劃', id: 'grantProgram' },
 		],
 	},
 	{
-		name: '如何申請',
+		name: HtmlName[2].name,
 		list: [
 			{ name: '獎助資格', id: 'quotaGrantees' },
 			{ name: '審核流程', id: 'reviewProcess' },
@@ -42,9 +42,9 @@ export const MenuList = [
 		],
 	},
 	{
-		name: '受獎助者',
+		name: HtmlName[3].name,
 		list: [
-			{ name: '實習心得', id: 'internshipExperience' },
+			{ name: '培訓心得', id: 'internshipExperience' },
 			// { name: '實習相片', id: 'internshipPhotos' },
 		],
 	},

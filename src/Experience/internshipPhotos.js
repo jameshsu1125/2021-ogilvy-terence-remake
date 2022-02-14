@@ -7,7 +7,7 @@ const InternshipPhotos = () => {
 	useEffect(() => {}, []);
 	return (
 		<Content id='internshipPhotos'>
-			<Headline text='實習相片' theme='red' />
+			<Headline text='培訓相片' theme='red' />
 		</Content>
 	);
 };

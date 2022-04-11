@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css');
+@import url('https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css&css');
 @import url('./color.less');
 
 body,
 html {
 	margin: 0;
-	font-family: 'cwTeXMing', serif;
-	text-size-adjust: none;
 	outline: none;
+	font-family: 'cwTeXMing', serif;
+
+	text-size-adjust: none;
 	overscroll-behavior: none;
 	scroll-behavior: smooth;
 }
@@ -18,21 +19,21 @@ button {
 
 .container {
 	position: relative;
-
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 	padding: 30px 0;
 
 	.content {
-		width: 100%;
 		max-width: 952px;
+		width: 100%;
 
 		& > p {
 			text-align: justify;
 			font-size: @desktop_p_fontSize;
 			line-height: @desktop_p_lineheight;
+
 			margin-block-start: 3rem;
 			margin-block-end: 3rem;
 		}
@@ -42,9 +43,9 @@ button {
 @media only screen and (max-width: 750px) {
 	.container {
 		.content {
-			width: 750px;
-			padding: 30px;
 			box-sizing: border-box;
+			padding: 30px;
+			width: 750px;
 
 			h1 {
 				font-size: @mobile_h1_fontSize;

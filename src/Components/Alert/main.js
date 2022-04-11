@@ -12,14 +12,20 @@ const splitCodeTag = (container, html) => {
 
 	content?.forEach((e) => {
 		let item = '';
-		const splitItem = e.split(' ').join('').split(',');
+		const splitItem = e
+			.split('<code>')
+			.join('')
+			.split('</code>')
+			.join('')
+			.split(' ')
+			.join('')
+			.split(',');
 
 		splitItem.forEach((name) => {
 			item += `<span>${name}</span>`;
 		});
 
-		code = code.replace('<|>', item);
-		code = code.split('<code>').join('').split('</code>').join('');
+		code = code.replace('<|>', `<code>${item}</code>`);
 
 		if (splitItem.length < 5) {
 			container.current.classList.add('less5Items');

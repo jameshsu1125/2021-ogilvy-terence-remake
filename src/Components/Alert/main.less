@@ -41,6 +41,7 @@
 		height: auto;
 		background-image: url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgICAgICAgICAgIDAwMDAwMDAwMDAQEBAQEBAQIBAQICAgECAgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwP/wAARCAAKAAoDAREAAhEBAxEB/8QAbwABAQEAAAAAAAAAAAAAAAAAAgAKAQEAAwAAAAAAAAAAAAAAAAABAgMEEAABAQYEBwEAAAAAAAAAAAABAgARMTIDMyFRYRLwkeEiQlKCUxEAAQMDBAMAAAAAAAAAAAAAAQCBAhFBUTFhkdHxItL/2gAMAwEAAhEDEQA/ANwlNFM06agkbU00lLxjKO4PCSXJjjBrSZVIuSsojExBGgCtlH8kZyIkyt9NWfbPnlFIYGW4SEgjaTNdh56ezF3ZPTvtlHlb4+ml2j5X/9k=');
 		text-align: center;
+		font-size: large;
 
 		.title {
 			width: 100%;
@@ -49,7 +50,6 @@
 
 		span {
 			color: #666;
-			font-size: small;
 		}
 
 		a {
@@ -59,7 +59,7 @@
 		code {
 			display: grid;
 			box-sizing: border-box;
-			padding: 10px 200px;
+			padding: 10px 100px;
 			letter-spacing: 0.2rem;
 
 			grid-template-columns: 20% 20% 20% 20% 20%;
@@ -105,5 +105,11 @@
 				.content;
 			}
 		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.Alert {
+		font-size: x-large;
 	}
 }

@@ -46,7 +46,7 @@ const Alert = (props) => {
 	const close = () => setAlert(false);
 
 	useEffect(() => {
-		fetch('./data/news.json')
+		fetch(`./data/news.json?r=${Math.random()}`)
 			.then((e) => e.json())
 			.then((result) => {
 				setContents(result);

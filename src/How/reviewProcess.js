@@ -19,7 +19,7 @@ const ReviewProcess = () => {
 	};
 
 	useEffect(() => {
-		fetch('./data/schedule.json')
+		fetch(`./data/schedule.json?s=${Math.random()}`)
 			.then((e) => e.json())
 			.then((result) => {
 				setContents(result);

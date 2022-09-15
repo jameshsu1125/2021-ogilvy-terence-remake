@@ -1,8 +1,7 @@
 import Gtag from 'lesca-gtag';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './How/main';
 import './Setting/global.less';
 
 Gtag.install(process.env.GA_ID);
-
-render(<App />, document.getElementById('app'));
+createRoot(document.getElementById('app')).render(<App />);

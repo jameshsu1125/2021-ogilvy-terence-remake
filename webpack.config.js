@@ -97,7 +97,7 @@ module.exports = () => {
 		devtool: NODE_ENV === 'production' ? false : 'cheap-module-source-map',
 		devServer: {
 			allowedHosts: 'all',
-			port: 8080,
+			port: 8070,
 			host: '0.0.0.0',
 			https: false,
 		},

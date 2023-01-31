@@ -13,6 +13,7 @@ const Nav = () => {
 		{ name: HtmlName[1].name, url: `./${HtmlName[1].fileName}.html` },
 		{ name: HtmlName[2].name, url: `./${HtmlName[2].fileName}.html` },
 		{ name: HtmlName[3].name, url: `./${HtmlName[3].fileName}.html` },
+		{ name: HtmlName[4].name, url: `./${HtmlName[4].fileName}.html` },
 	]);
 
 	const showHamContent = () => setHamContent(true);

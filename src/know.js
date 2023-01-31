@@ -1,6 +1,6 @@
 import Gtag from 'lesca-gtag';
 import { createRoot } from 'react-dom/client';
-import App from './Index/main';
+import App from './Know/main';
 import './Setting/global.less';
 
 Gtag.install(process.env.GA_ID);

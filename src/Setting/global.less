@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css?css');
 @import url('./color.less');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body,
 html {
 	margin: 0;
@@ -17,13 +21,14 @@ button {
 	font-family: 'cwTeXMing', serif;
 }
 
-.container {
+.containers {
 	position: relative;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
 	padding: 30px 0;
+	width: 100%;
 
 	.content {
 		max-width: 952px;
@@ -41,7 +46,7 @@ button {
 }
 
 @media only screen and (max-width: 750px) {
-	.container {
+	.containers {
 		.content {
 			box-sizing: border-box;
 			padding: 30px;

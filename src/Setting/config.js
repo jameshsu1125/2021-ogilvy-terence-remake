@@ -10,35 +10,34 @@ export const AlertDisableTimestamp = 1000 * 60 * 60; // 1小時
 // export const AlertDisableTimestamp = 1000;
 
 export const HtmlName = [
-	{ name: '認識林宗緯', fileName: 'index' },
-	{ name: '計畫介紹', fileName: 'introduction' },
+	{ name: '培訓內容', fileName: 'index' },
 	{ name: '如何申請', fileName: 'how' },
-	{ name: '受獎助者', fileName: 'experience' },
+	{ name: '計畫介紹', fileName: 'introduction' },
+	{ name: '前人分享', fileName: 'experience' },
+	{ name: '認識林宗緯', fileName: 'know' },
 ];
 
 export const MenuList = [
 	{
 		name: HtmlName[0].name,
 		list: [
-			{ name: '認識林宗緯', id: 'knowTerence' },
-			{ name: '我眼中的林宗緯', id: 'terenceInMyEyes' },
-			{ name: '林宗緯的七種特質', id: 'sevenAttributes' },
-			{ name: '林宗緯語錄', id: 'terenceQuotations' },
+			{ name: '招募職位', id: 'position' },
+			{ name: '大師獨家課', id: 'masterExclusive' },
 		],
 	},
 	{
 		name: HtmlName[1].name,
 		list: [
-			{ name: '計劃宗旨', id: 'projectPurpose' },
-			{ name: '獎助計劃', id: 'grantProgram' },
+			{ name: '獎助資格', id: 'quotaGrantees' },
+			{ name: '審核流程', id: 'reviewProcess' },
+			{ name: '建議與指導', id: 'suggestionDirecting' },
 		],
 	},
 	{
 		name: HtmlName[2].name,
 		list: [
-			{ name: '獎助資格', id: 'quotaGrantees' },
-			{ name: '審核流程', id: 'reviewProcess' },
-			{ name: '建議與指導', id: 'suggestionDirecting' },
+			{ name: '計劃宗旨', id: 'projectPurpose' },
+			{ name: '獎助計劃', id: 'grantProgram' },
 		],
 	},
 	{
@@ -48,9 +47,19 @@ export const MenuList = [
 			// { name: '實習相片', id: 'internshipPhotos' },
 		],
 	},
+	{
+		name: HtmlName[4].name,
+		list: [
+			{ name: '認識林宗緯', id: 'knowTerence' },
+			{ name: '我眼中的林宗緯', id: 'terenceInMyEyes' },
+			{ name: '林宗緯的七種特質', id: 'sevenAttributes' },
+			{ name: '林宗緯語錄', id: 'terenceQuotations' },
+		],
+	},
 ];
 
 export const ScrollTo = (element, offset = 0) => {
+	if (!element) return;
 	const { top } = Position(element);
 	const navHeight = window.innerWidth > 750 ? 65 : 130;
 	const menuHeight = window.innerWidth > 750 ? 227 : 320;

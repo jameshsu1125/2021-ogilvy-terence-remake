@@ -12,11 +12,11 @@ module.exports = () => {
 		mode: NODE_ENV || 'development',
 		target: NODE_ENV !== 'production' ? 'web' : 'browserslist',
 		entry: {
-			index: './src/index.js', // 認識林宗緯
-			introduction: './src/introduction.js', // 實習計畫介紹
+			index: './src/index.js', // 培訓內容
 			how: './src/how.js', // 如何申請
+			introduction: './src/introduction.js', // 實習計畫介紹
 			experience: './src/experience.js', // 受獎助者
-			// admin: './src/admin.js', // 編輯歷屆紅領帶
+			know: './src/know.js', // 認識林宗緯
 		},
 		module: {
 			rules: [
@@ -97,7 +97,7 @@ module.exports = () => {
 		devtool: NODE_ENV === 'production' ? false : 'cheap-module-source-map',
 		devServer: {
 			allowedHosts: 'all',
-			port: 8070,
+			port: 8080,
 			host: '0.0.0.0',
 			https: false,
 		},
@@ -105,7 +105,7 @@ module.exports = () => {
 			hints: false,
 		},
 	};
-	Object.keys(setting.entry).map((entry) => {
+	Object.keys(setting.entry).forEach((entry) => {
 		setting.plugins.push(
 			new HtmlWebpackPlugin({
 				...Meta,

@@ -6,16 +6,17 @@ import Header from '../Components/Header/main';
 import Menu from '../Components/Menu/main';
 import Nav from '../Components/Nav/main';
 import { AlertDisableTimestamp, HashChange } from '../Setting/config';
+import { Context, defaultContext } from './config';
 import './index.less';
 import MasterExclusive from './masterExclusive';
 import Position from './position';
 
 const Index = memo(() => {
 	const [alert, setAlert] = useState(false);
+	const value = useState(defaultContext);
 
 	useEffect(() => {
 		HashChange();
-
 		const { data, timestamp } = Storage.get('alert');
 		if (!data || timestamp >= AlertDisableTimestamp) {
 			setAlert(true);
@@ -28,7 +29,9 @@ const Index = memo(() => {
 			<Nav />
 			<Header setAlert={setAlert} />
 			<Menu />
-			<Position />
+			<Context.Provider value={value}>
+				<Position />
+			</Context.Provider>
 			<MasterExclusive />
 			<Footer />
 			{alert && <Alert setAlert={setAlert} />}

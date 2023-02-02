@@ -2,12 +2,114 @@
 
 #masterExclusive {
 	background-color: @ogilvy_white;
+
 	& > .content {
 		color: @ogilvy_black;
-	}
-}
 
-@media only screen and (max-width: 750px) {
-	#masterExclusive {
+		.arrow {
+			position: absolute;
+			top: 50%;
+			z-index: 10;
+			margin-top: 0 - image-height(@img) * @scale * 0.5;
+			width: image-width(@img) * @scale;
+			height: image-height(@img) * @scale;
+			background-image: url(@img);
+			background-position: center;
+			background-size: 50%;
+			background-repeat: no-repeat;
+			cursor: pointer;
+
+			@scale: 0.7;
+			@img: './img/master/arrow.svg';
+
+			&:hover {
+				background-color: #e93e4110;
+			}
+		}
+
+		.slick-list {
+			overflow: hidden;
+		}
+
+		.slick-dots {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			justify-content: center;
+			margin-top: 10px;
+			list-style: none;
+
+			.slick-active {
+				& > div {
+					background-color: #e93e41;
+				}
+			}
+		}
+
+		.slick-track {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.master0 {
+			background-image: url('./img/master/0.jpg');
+			background-size: 100%;
+		}
+
+		.master1 {
+			background-image: url('./img/master/1.jpg');
+			background-position: center 10%;
+			background-size: 140%;
+			background-repeat: no-repeat;
+		}
+
+		.master2 {
+			background-image: url('./img/master/2.jpg');
+			background-position: center 10%;
+			background-size: 120%;
+			background-repeat: no-repeat;
+		}
+
+		.master3 {
+			background-image: url('./img/master/3.jpg');
+			background-position: center 0%;
+			background-size: 110%;
+			background-repeat: no-repeat;
+		}
+
+		.master4 {
+			background-image: url('./img/master/4.jpg');
+			background-position: center 36%;
+			background-size: 135%;
+			background-repeat: no-repeat;
+		}
+
+		.master5 {
+			background-image: url('./img/master/5.jpg');
+			background-position: 62% 0%;
+			background-size: 170%;
+			background-repeat: no-repeat;
+		}
+
+		.master6 {
+			background-image: url('./img/master/6.jpg');
+			background-position: center 0%;
+			background-size: 155%;
+			background-repeat: no-repeat;
+		}
+
+		.master7 {
+			background-image: url('./img/master/7.jpg');
+			background-position: 0% 10%;
+			background-size: 110%;
+			background-repeat: no-repeat;
+		}
+
+		.master8 {
+			background-image: url('./img/master/8.jpg');
+			background-position: 24% 0%;
+			background-size: 130%;
+			background-repeat: no-repeat;
+		}
 	}
 }

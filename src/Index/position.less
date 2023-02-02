@@ -5,5 +5,23 @@
 
 	& > .content {
 		color: @ogilvy_white;
+
+		.tab {
+			box-shadow: 2px 2px 0 #a12116;
+
+			& > div {
+				&:hover {
+					& > div {
+						border-right: none;
+					}
+				}
+			}
+
+			& > div:last-child {
+				& > div {
+					border-right: none;
+				}
+			}
+		}
 	}
 }

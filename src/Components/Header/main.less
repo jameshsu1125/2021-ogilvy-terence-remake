@@ -73,8 +73,8 @@ header {
 		}
 
 		&:hover {
-			cursor: pointer;
 			text-decoration: underline;
+			cursor: pointer;
 			& > span {
 				color: #fff;
 				text-decoration: underline;
@@ -83,42 +83,13 @@ header {
 	}
 
 	.theme {
-		position: relative;
-		margin-top: 10px;
-		width: 100%;
-		height: 390px;
-		background-color: @ogilvy_red;
+		padding-bottom: (unit(image-height(@img) / unit(image-width(@img))) * @width);
+		width: @width;
+		background-image: url(@img);
+		background-size: cover;
 
-		.lipsum {
-			box-sizing: border-box;
-			margin-left: 107px;
-			padding: 20px 0;
-
-			h1 {
-				text-indent: 0;
-				font-size: 1.4rem;
-			}
-
-			p {
-				font-size: @desktop_p_fontSize;
-				line-height: @desktop_p_lineheight;
-			}
-		}
-
-		.tie {
-			position: absolute;
-			top: 60px;
-			right: 40px;
-			z-index: 2;
-			width: image-width(@img) * @size;
-			height: image-height(@img) * @size;
-			background-image: url(@img);
-			background-size: 100%;
-			pointer-events: none;
-
-			@size: 0.5;
-			@img: './img/tie.png';
-		}
+		@width: 100%;
+		@img: './img/keyv.jpg';
 	}
 
 	.menu {
@@ -168,36 +139,6 @@ header {
 				height: image-height(@img) * @scale;
 
 				@img: './img/word.svg';
-			}
-		}
-
-		.theme {
-			position: relative;
-			margin-top: 10px;
-			width: 100%;
-			height: 470px;
-
-			.lipsum {
-				margin-left: 30px;
-				padding: 20px 0;
-
-				h1 {
-					font-size: 2rem;
-				}
-
-				p {
-					font-size: @mobile_p_fontSize;
-					line-height: @mobile_p_lineheight;
-				}
-			}
-
-			.tie {
-				top: 220px;
-				right: 30px;
-				width: image-width(@img) * @size;
-				height: image-height(@img) * @size;
-				@size: 0.4;
-				@img: './img/tie.png';
 			}
 		}
 	}

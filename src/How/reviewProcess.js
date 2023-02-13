@@ -8,12 +8,7 @@ import './reviewProcess.less';
 // ! => 如何申請 / 審核流程
 const ReviewProcess = () => {
 	const [contents, setContents] = useState({});
-	const [url, setURL] = useState(false);
 	const [date, setDate] = useState(Data);
-
-	const openGoogleForm = () => {
-		if (url) window.open(url);
-	};
 
 	useEffect(() => {
 		fetch(`./data/schedule.json?s=${Math.random()}`)
@@ -26,7 +21,6 @@ const ReviewProcess = () => {
 
 	useShallowCompareEffect(() => {
 		if (Object.keys(contents).length > 0) {
-			setURL(contents.url);
 			const preset = [...date];
 			const list = preset[0].list[1];
 			preset[0].list[1] = list.split('{date}').join(contents.date);
@@ -37,8 +31,6 @@ const ReviewProcess = () => {
 	return (
 		<Content id='reviewProcess'>
 			<Headline text='申請流程' theme='white' />
-			<br />
-
 			<div className='row'>
 				<h4>報名：</h4>
 				<ul>
@@ -80,7 +72,7 @@ const ReviewProcess = () => {
 				<h4>2023第十五屆申請時間表：</h4>
 				<ul>
 					<li>2023/2/15：開始收件</li>
-					<li>2023/3/11：紅領帶說明會</li>
+					<li>2023/3/04：紅領帶說明會</li>
 					<li>2023/3/26：截止收件</li>
 					<li>2023/3/29：18:00-21:00 舉行筆試</li>
 					<li>2023/4/13：公布入圍口試名單</li>
@@ -91,7 +83,12 @@ const ReviewProcess = () => {
 			</div>
 
 			<div className='block'>
-				<button type='button' onClick={openGoogleForm}>
+				<button
+					type='button'
+					onClick={() => {
+						window.open('https://forms.gle/YHp5PZNvp1WFkgiS8');
+					}}
+				>
 					前往申請
 				</button>
 			</div>

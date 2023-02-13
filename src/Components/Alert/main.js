@@ -43,24 +43,23 @@ const Alert = (props) => {
 					<p>
 						僅訂於<b>2022/3/4 (六) 13:00-18:00</b> 舉辦紅領帶說明會。
 						<br />
-						說明會除有紅領帶校友說明紅領帶計畫內容外， 更將邀請奧美現職講師，
+						說明會除有紅領帶校友說明紅領帶計畫內容外，
+						<br />
+						更將邀請奧美現職講師，
 						<br />
 						介紹業務、創意、策略、數位、公關，五大領域之工作內容，
 						<br />
 						讓你一探奧美、紅領帶究竟在做什麼？
 					</p>
-					<p className='text-sm'>
-						*說明會報名訊息請留意
-						<a
-							className='mx-1 hover:underline'
-							target='_blank'
-							rel='noreferrer'
-							href='https://www.facebook.com/OgilvyTaiwan/'
-						>
-							台灣奧美臉書粉絲頁
-						</a>
-						*
-					</p>
+					<button
+						className=''
+						onClick={() => {
+							window.open('https://forms.gle/6LBrPQm8bjPTW5Td6');
+						}}
+						type='button'
+					>
+						*即刻報名*
+					</button>
 				</div>
 				<div className='alert-close' onClick={close} onKeyPress={close} role='none' />
 			</div>

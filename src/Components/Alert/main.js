@@ -29,7 +29,7 @@ const Alert = (props) => {
 						<h1>【第十五屆 奧美林宗緯紅領帶計劃】報名開始</h1>
 					</div>
 					<p>
-						詳細申請流程請參考 [如何申請]
+						詳細申請流程請參考
 						<a className='mx-1 hover:underline' href='./how.html' target='_self'>
 							[如何申請]
 						</a>

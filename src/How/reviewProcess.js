@@ -86,7 +86,7 @@ const ReviewProcess = () => {
 				<button
 					type='button'
 					onClick={() => {
-						window.open('https://forms.gle/YHp5PZNvp1WFkgiS8');
+						window.open('https://forms.gle/8qQJXZ7VXJgFLcSt7');
 					}}
 				>
 					前往申請

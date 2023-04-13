@@ -4,6 +4,9 @@ module.exports = {
 	theme: {
 		extend: {},
 		container: { screen: {} },
+		colors: {
+			ogilvy_red: '#eb3f43',
+		},
 	},
 	plugins: [],
 };

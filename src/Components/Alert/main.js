@@ -2,6 +2,32 @@
 import { useEffect, useRef } from 'react';
 import './main.less';
 
+const numberData = [
+	'于馥甄',
+	'王歆妤',
+	'邱慧琪',
+	'李宸竹',
+	'呂佳真',
+	'李　昀',
+	'卓正英',
+	'卓宜蓁',
+	'周宗在',
+	'陳昱霈',
+	'陳宥心',
+	'陳俞佑',
+	'陳盈淳',
+	'許守成',
+	'麥海柔',
+	'黃楷翔',
+	'葉光筠',
+	'蔡昀臻',
+	'蔡尚倫',
+	'劉元泰',
+	'簡嘉瑩',
+	'羅紫芸',
+	'龐舒勻',
+];
+
 const Alert = (props) => {
 	const { setAlert } = props;
 	const containerRef = useRef();
@@ -26,27 +52,27 @@ const Alert = (props) => {
 			<div ref={containerRef} className='alert-container'>
 				<div className='my-5 space-y-4'>
 					<div className='title'>
-						<h1>【第十五屆 奧美林宗緯紅領帶計劃】筆試公告</h1>
+						<h1>【第十五屆 奧美林宗緯紅領帶計劃】口試名單</h1>
+						<span className='text-sm text-[#666]'>(依筆畫順序排列)</span>
 					</div>
-					<p>
-						線上筆試作答時間
+					<code className='text-base'>
+						{numberData.map((e) => (
+							<span key={e}>{e}</span>
+						))}
+					</code>
+					<h2>口試時間</h2>
+					<p className='text-base'>
+						4月22日
 						<br />
-						台灣時間 3月29日 18:00 – 21:00
+						上午場10:00 舉行，09:20-09:40報到
 						<br />
-						線上筆試連結將於上述時間寄送至報名時提供之電子信箱
-						<br />
-						請自行確認電子信箱運作正常
+						下午場14:00 舉行，13:20-13:40報到
 					</p>
-					<hr />
-					<p>
-						入選筆試者將同步發送筆試通知信，3/28日前仍未收到通知信或有其他問題
-						<br />
-						請來信
-						<a className='mx-1 hover:underline' href='mailto:amyty.chen@ogilvy.com'>
-							amyty.chen@ogilvy.com
-						</a>
-						詢問
-					</p>
+					<h2>口試地點</h2>
+					<p className='text-base'>台灣奧美／台北市信義區松仁路89號3樓</p>
+					<span className='text-sm text-ogilvy_red'>
+						（口試相關之詳細資訊將會另行Email通知所有口試者 ）
+					</span>
 				</div>
 				<div className='alert-close' onClick={close} onKeyPress={close} role='none' />
 			</div>

@@ -27,6 +27,7 @@ const numberData = [
 	'羅紫芸',
 	'龐舒勻',
 ];
+export const Title = '【第十五屆 奧美林宗緯紅領帶計劃】口試名單';
 
 const Alert = (props) => {
 	const { setAlert } = props;
@@ -52,7 +53,7 @@ const Alert = (props) => {
 			<div ref={containerRef} className='alert-container'>
 				<div className='my-5 space-y-4'>
 					<div className='title'>
-						<h1>【第十五屆 奧美林宗緯紅領帶計劃】口試名單</h1>
+						<h1>{Title}</h1>
 						<span className='text-sm text-[#666]'>(依筆畫順序排列)</span>
 					</div>
 					<code className='text-base'>

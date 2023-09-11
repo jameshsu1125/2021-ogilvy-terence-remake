@@ -2,8 +2,8 @@
 import { useEffect, useRef } from 'react';
 import './main.less';
 
-const numberData = ['卓宜蓁', '邱慧琪', '陳昱霈', '麥海柔', '黃楷翔', '蔡尚倫', '龐舒勻'];
-export const Title = '【第十五屆 奧美林宗緯紅領帶計劃】培訓名單';
+const numberData = ['黃楷翔', '蔡尚倫'];
+export const Title = '【第十五屆 奧美林宗緯紅領帶培訓計畫】 獎助學金名單';
 
 const Alert = (props) => {
 	const { setAlert } = props;

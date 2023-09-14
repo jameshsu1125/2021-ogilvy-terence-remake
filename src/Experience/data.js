@@ -1,17 +1,18 @@
-import { 詹曜維, 周于鈴, 王俊凱 } from './data/1st/data';
-import { 蔡承翰, 王彤, 陳昱安, 曾韻丞, 張競, 葉致綱 } from './data/2nd/data';
-import { 邱彥蓁, 鄒玉珊, 盧亭軒, 蔡育旻 } from './data/3rd/data';
-import { 溫婷瑩, 唐偉峻, 曾繁皓, 范君達, 莊智淵 } from './data/4th/data';
-import { 牛嗣捷, 汪世怡, 涂子軒 } from './data/5th/data';
-import { 錢雅莛, 江昀潔, 白傑 } from './data/6th/data';
-import { 何伯濤, 林叡志, 施又寧, 林峻毅 } from './data/7th/data';
-import { 林亞駿, 蘇怡心 } from './data/8th/data';
-import { 王薇涵, 嚴德鈞, 張容瑄, 彭亭翊 } from './data/9th/data';
 import { 李承恩, 林佑珊 } from './data/10th/data';
-import { 林堉涵, 劉亭妤, 方瑋婕, 盛以和, 方聖叡, 徐聖勛, 陳冠蓉 } from './data/11th/data';
-import { 林奕瑄, 鄭琮文, 賴彥廷, 許茹涵, 邱子瑜, 林芝羽, 吳若慈, 黃少甫 } from './data/12th/data';
-import { 鄭暐翰, 陳又慈, 李品萱, 劉昱伶, 洪名遠, 詹蕎 } from './data/13th/data';
-import { 王力萱, 林姿儀, 柯詠珩, 陳念微, 林妤晴 } from './data/14th/data';
+import { 劉亭妤, 徐聖勛, 方瑋婕, 方聖叡, 林堉涵, 盛以和, 陳冠蓉 } from './data/11th/data';
+import { 吳若慈, 林奕瑄, 林芝羽, 許茹涵, 賴彥廷, 邱子瑜, 鄭琮文, 黃少甫 } from './data/12th/data';
+import { 劉昱伶, 李品萱, 洪名遠, 詹蕎, 鄭暐翰, 陳又慈 } from './data/13th/data';
+import { 林妤晴, 林姿儀, 柯詠珩, 王力萱, 陳念微 } from './data/14th/data';
+import { 卓宜蓁, 蔡尚倫, 邱慧琪, 陳昱霈, 麥海柔, 黃楷翔, 龐舒勻 } from './data/15th/data';
+import { 周于鈴, 王俊凱, 詹曜維 } from './data/1st/data';
+import { 張競, 曾韻丞, 王彤, 葉致綱, 蔡承翰, 陳昱安 } from './data/2nd/data';
+import { 盧亭軒, 蔡育旻, 邱彥蓁, 鄒玉珊 } from './data/3rd/data';
+import { 唐偉峻, 曾繁皓, 溫婷瑩, 范君達, 莊智淵 } from './data/4th/data';
+import { 汪世怡, 涂子軒, 牛嗣捷 } from './data/5th/data';
+import { 江昀潔, 白傑, 錢雅莛 } from './data/6th/data';
+import { 何伯濤, 施又寧, 林叡志, 林峻毅 } from './data/7th/data';
+import { 林亞駿, 蘇怡心 } from './data/8th/data';
+import { 嚴德鈞, 張容瑄, 彭亭翊, 王薇涵 } from './data/9th/data';
 
 export const DefaultInternshipExperience = {
 	'2009 第一屆紅領帶': [
@@ -103,6 +104,15 @@ export const DefaultInternshipExperience = {
 		{ name: { cht: '柯詠珩', eng: 'Street Ko' }, html: 柯詠珩 },
 		{ name: { cht: '陳念微', eng: 'WiWi Chen' }, html: 陳念微 },
 		{ name: { cht: '林妤晴', eng: 'Miffy Lin' }, html: 林妤晴 },
+	],
+	'2023 第十五屆紅領帶': [
+		{ name: { cht: '卓宜蓁', eng: 'Verna Cho' }, html: 卓宜蓁 },
+		{ name: { cht: '邱慧琪', eng: 'Vicky Khoo' }, html: 邱慧琪 },
+		{ name: { cht: '黃楷翔', eng: 'Sean Huang' }, html: 黃楷翔 },
+		{ name: { cht: '蔡尚倫', eng: 'Linus Tsai' }, html: 蔡尚倫 },
+		{ name: { cht: '麥海柔', eng: 'Bessie Mai' }, html: 麥海柔 },
+		{ name: { cht: '龐舒勻', eng: 'Michelle Pang' }, html: 龐舒勻 },
+		{ name: { cht: '陳昱霈', eng: 'Yupei Chen' }, html: 陳昱霈 },
 	],
 };
 export default {};

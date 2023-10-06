@@ -6,6 +6,7 @@ module.exports = {
 		container: { screen: {} },
 		colors: {
 			ogilvy_red: '#eb3f43',
+			white: '#ffffff',
 		},
 	},
 	plugins: [],

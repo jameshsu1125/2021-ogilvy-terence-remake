@@ -1,13 +1,19 @@
+/* eslint-disable import/no-extraneous-dependencies */
+import color from 'tailwindcss/colors';
+
+const { fontSize } = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-	content: ['./src/**/*.{html,js}'],
-	theme: {
-		extend: {},
-		container: { screen: {} },
-		colors: {
-			ogilvy_red: '#eb3f43',
-			white: '#ffffff',
-		},
+export const content = ['./src/**/*.{html,js}'];
+export const theme = {
+	extend: {},
+	container: { screen: {} },
+	fontSize: {
+		...fontSize,
 	},
-	plugins: [],
+	colors: {
+		...color,
+		ogilvy_red: '#eb3f43',
+	},
 };
+export const plugins = [];
